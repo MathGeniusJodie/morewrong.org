@@ -40,13 +40,20 @@ function extractComments(commentElement) {
   commentElement.children('.post-comment').each((i, el) => {
     const comment = $(el);
     const author = comment.find('.post-author').first().text().trim();
+    const karma = comment.find('.comment-score').first().text().trim();
+    const aggreement = comment.find('.comment-score2').first().text().trim();
     // Skip "New Comment" placeholders that are just begging for attention.
     if (author.toLowerCase().includes('new comment')) return;
     const commentHtml = comment.find('p').first().html() || '';
     const content = turndownService.turndown(commentHtml);
     // Recursively look for direct nested comments (replies).
     const replies = extractComments(comment);
-    const commentData = { author, content };
+    const commentData = { 
+        author,
+        content,
+        karma,
+        aggreement,
+    };
     if (replies.length > 0) {
       commentData.replies = replies;
     }
@@ -66,6 +73,13 @@ $('.article-container').each((i, elem) => {
   author = author.replace(/^by\s+/i, '');
   const date = article.find('.article-time').first().text().trim();
 
+    // Extract comments (if any) using our recursive function.
+    let comments = [];
+    const commentsBox = article.find('.post-comments-box');
+    if (commentsBox.length > 0) {
+      comments = extractComments(commentsBox);
+    }
+
   // Remove the comments section to isolate the main content.
   article.find('.post-comments-box').remove();
 
@@ -79,12 +93,7 @@ $('.article-container').each((i, elem) => {
   });
   const contentMarkdown = turndownService.turndown(contentHtml);
 
-  // Extract comments (if any) using our recursive function.
-  let comments = [];
-  const commentsBox = article.find('.post-comments-box');
-  if (commentsBox.length > 0) {
-    comments = extractComments(commentsBox);
-  }
+
 
   // Build YAML front matter with the post metadata and comments.
   const frontMatter = {
@@ -109,3 +118,25 @@ $('.article-container').each((i, elem) => {
   console.log(`Exported: ${fileName}`);
 });
 
+$(".main-container").find(".post-item").each((i, elem) => {
+    const title = $(elem).find(".post-title").text().trim();
+    const author = $(elem).find(".post-author").text().trim();
+    const small = $(elem).find(".post-title").find("small");// todo: limit length of title for file name only
+    if (!small) return;
+    const frontMatter = {
+        title,
+        author,
+        date: "NA",
+        comments: [],
+      };
+    const yamlFront = `---\n${yaml.dump(frontMatter)}---\n\n`;
+    const fileContent = yamlFront + "[insert article here]";
+    const slug = title
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+  const fileName = path.join(outputDir, `${slug}.md`);
+
+  fs.writeFileSync(fileName, fileContent, 'utf8');
+    });
+    

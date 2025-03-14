@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+  <title>MoreWrong</title>
+  <style>
+    /* Reset and base styles */
+    * {
+      font-family: inherit;
+    }
+
+    body {
+      background-color: #f8f4ee;
+      margin: 0;
+      background-image: url(rat-background.avif);
+      background-position: right -180px top;
+      background-size: max(calc(50vw - 400px), 700px) max(calc(50vw - 400px), 700px);
+      background-repeat: no-repeat;
+      color: rgba(0, 0, 0, 0.87);
+      line-height: 1.5;
+      font-family: lato, sans-serif;
+    }
+
+    /* Header styles */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.75rem 1.5rem;
+      height: 64px;
+      box-shadow: 0 1px 1px rgba(0,0,0,.05),0 1px 1px rgba(0,0,0,.05);
+      background-color: rgba(255,255,255,.65);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+    }
+
+    .menu-button {
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      margin-right: 1rem;
+      cursor: pointer;
+    }
+
+    .logo {
+      font-size:27px;
+      text-decoration: none;
+      color: #333;
+      font-family: "Crimson Pro", serif;
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .search-bar {
+      display: flex;
+      align-items: center;
+      background-color: #f0f0f0;
+      border-radius: 4px;
+      padding: 0.25rem 0.75rem;
+    }
+
+    .search-icon {
+      margin-right: 0.5rem;
+    }
+
+    .search-input {
+      border: none;
+      background: transparent;
+      outline: none;
+      font-size: 0.9rem;
+    }
+
+    .user-actions a {
+      color: #333;
+      text-decoration: none;
+      margin-left: 1rem;
+    }
+
+    /* Main content layout */
+    .main-container {
+      display: flex;
+      max-width: 765px;
+      margin: 82px auto;
+    }
+
+    /* Sidebar styles */
+    .sidebar {
+      width: 250px;
+      padding: 1rem;
+      background-color: white;
+      overflow-y: auto;
+      border-right: 1px solid #e0e0e0;
+    }
+
+    .sidebar-item {
+      display: flex;
+      align-items: center;
+      padding: 0.75rem 0.5rem;
+      text-decoration: none;
+      color: #333;
+      border-radius: 4px;
+    }
+
+    .sidebar-item:hover {
+      background-color: #f0f0f0;
+    }
+
+    .sidebar-icon {
+      margin-right: 0.75rem;
+      width: 20px;
+      text-align: center;
+    }
+
+    .sidebar-divider {
+      border-top: 1px solid #e0e0e0;
+      margin: 0.75rem 0;
+    }
+
+    .sidebar-subitem {
+      padding: 0.5rem 0.5rem 0.5rem 2rem;
+      display: block;
+      text-decoration: none;
+      color: #555;
+      font-size: 0.9rem;
+    }
+
+    /* Content styles */
+    .content {
+      flex: 1;
+      overflow-y: auto;
+      background-color: white;
+    }
+
+    .banner {
+      position: relative;
+      background-color: white;
+      border-radius: 4px;
+      overflow: hidden;
+      margin-bottom: 1rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+
+    .banner-content {
+      padding: 1.5rem;
+      position: relative;
+      z-index: 2;
+      max-width: 60%;
+    }
+
+    .banner-bg {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 50%;
+      height: 100%;
+      background-image: url('https://via.placeholder.com/500x300');
+      background-size: cover;
+      background-position: center;
+      z-index: 1;
+    }
+
+    .banner-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+    }
+
+    .banner-text {
+      margin-bottom: 1rem;
+    }
+
+    .close-button {
+      position: absolute;
+      top: 0.5rem;
+      right: 0.5rem;
+      background: none;
+      border: none;
+      font-size: 1.25rem;
+      cursor: pointer;
+      z-index: 3;
+    }
+
+    /* Tabs */
+    .tabs {
+      display: flex;
+      margin-bottom: 1rem;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    .tab {
+      padding: 0.75rem 1.5rem;
+      cursor: pointer;
+      border-bottom: 2px solid transparent;
+    }
+
+    .tab.active {
+      border-bottom: 2px solid #7bab85;
+      color: #7bab85;
+      font-weight: 500;
+    }
+
+    /* Post list */
+    .post-item {
+      display: flex;
+      padding: 0.75rem;
+      border-bottom: 1px solid #f0f0f0;
+      border-top: 1px solid #f0f0f0;
+      align-items: center;
+    }
+
+    .post-score {
+      width: 40px;
+      text-align: center;
+      padding-right: 1rem;
+      color: #888;
+    }
+
+    .post-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex: 1;
+    }
+
+    .post-title {
+      font-size: 20px;
+      text-decoration: none;
+      display: flex;
+      align-items: baseline;
+      font-family: "Crimson Pro", serif;
+      color: inherit;
+    }
+
+    .post-title-star {
+      margin-right: 0.5rem;
+    }
+
+    .post-meta {
+      display: flex;
+      align-items: center;
+      font-size: 0.85rem;
+      color: #888;
+      margin-top: 0.25rem;
+      text-align: right;
+    }
+
+    .post-author {
+      margin-right: 0.5rem;
+    }
+
+    .post-comments {
+      width:3ch;
+      box-sizing: content-box;
+      text-align: center;
+      font-size: 0.85rem;
+      padding: 0.25rem 0.5rem;
+      background-color: #aaa;
+      border-radius: 4px;
+      color: #fff;
+      border-bottom-right-radius: 0;
+      position: relative;
+    }
+    .post-comments::after{
+      content: '';
+      display: block;
+      width: 0;
+      height: 0;
+      border-right: 8px solid #aaa;
+      border-top: 0 solid transparent;
+      border-bottom: 8px solid transparent;
+      position: absolute;
+      top: 100%;
+      right: 0;
+    }
+
+    .post-time {
+      width: 60px;
+      text-align: center;
+      font-size: 0.85rem;
+      color: #888;
+    }
+
+    /* Background image overlay */
+    .page-background {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 35%;
+      background-image: url('https://via.placeholder.com/800x1200');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.15;
+      z-index: -1;
+    }
+
+    /* Settings button */
+    .settings-button {
+      position: absolute;
+      bottom: 1rem;
+      right: 1rem;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: white;
+      border: 1px solid #e0e0e0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    /* Chat bubble */
+    .chat-bubble {
+      position: fixed;
+      bottom: 1rem;
+      right: 1rem;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: #333;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+
+    h1{
+      font-size: 3.75rem;
+      line-height: 1em;
+      font-weight: normal;
+    }
+    .article-container{
+      font-family: "Crimson Pro", serif;
+      background: white;
+      padding: 82px calc(50vw - 400px);
+      display: none;
+    }
+    .article-meta{
+      font-family: lato, sans-serif;
+    }
+    .article-container:target{
+      display: block !important;
+    }
+    .article-container:target ~ .main-container{
+      display: none;
+    }
+    .article-author{
+      font-weight: bold;
+    }
+    .article-time{
+      margin-left: 3ch;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="header-left">
+      <!-- <button class="menu-button">☰</button>-->
+      <a href="#" class="logo">MOREWRONG</a>
+    </div>
+    <!--<div class="header-right">
+      <div class="search-bar">
+        <span class="search-icon">🔍</span>
+        <input type="text" class="search-input" placeholder="Search here...">
+      </div>
+    </div>-->
+  </header>
+  <div class="article-container" id="article-1">
+    <div class="article-header">
+      <h1>Welcome to MoreWrong!</h1>
+      <div class="article-meta">
+        <span class="article-author">by Eliezer Yud-rat-sky</span>
+        <time class="article-time">25th Feb 2025</time>
+      </div>
+      <p>MoreWrong is an online forum and community dedicated to impair human reasoning and decision-making. We seek to hold wrong beliefs and to be inneffective at accomplishing our goals. Each day, we aim to be more wrong about the world than the day before.</p> 
+      <h3>The Core Philosophy of MoreWrong</h3>
+      <p>Here at MoreWrong, we firmly believe in the power of cognitive dissonance. Why settle for having your thoughts align with reality when you can experience the sheer thrill of contradiction? We’ve learned that the best way to thrive in life is to ignore all evidence, discard any shred of rationality, and immerse ourselves in the chaos of unfounded opinions.</p>
+      <h3>The Dunning-Kruger Effect? Our Members Are Masters</h3>
+      <p>It’s not enough to simply think you know something. You need to believe you really know it, with the kind of unwavering confidence that could only come from being woefully misinformed. At MoreWrong, we actively encourage our members to overestimate their knowledge.</p>
+      <h3>The Art of Being Wrong</h3>
+      <p>Being wrong isn’t just a state of mind at MoreWrong—it’s a lifestyle. We constantly engage in activities designed to make us as wrong as possible in every area of life. Want to bet on a prediction market? Bet on the least likely outcome and watch as the world laughs at your audacity. Think you can actually predict anything? That’s adorable—bet on things you can’t even understand. Make sure to double down on it every time you’re proven wrong.</p>
+      <h3>Our Approach to Goal-Setting: Ineffectiveness Above All</h3>
+      <p>At MoreWrong, we aim to set goals we know we’ll fail at. That’s the only true path to growth, because nothing builds character like the relentless pursuit of the impossible. Why work in small, digestible chunks when you can overwhelm yourself with tasks that defy all human capacity for completion? Why bother with balance when you can exist in a state of perpetual chaos? The key is to not focus on achieving anything meaningful. If you succeed, you're doing it wrong. If you fail, you’re simply on the right track. After all, failure is just the universe's way of telling you you're not being wrong enough.</p>
+      <h3>Why Join MoreWrong?</h3>
+      <p>Because nothing feels more fulfilling than embracing the chaos and accepting the inevitable truth: We’re all wrong, and that’s exactly how we like it. So if you’re tired of being right, of achieving goals, of making progress, and of living a rational, effective life, you’ve found the right place.</p>
+      <p>Embrace your inner delusion. At MoreWrong, being wrong is the only right answer.</p>
+    </div>
+  </div>
+  <div class="article-container" id="article-2">
+    <div class="article-header">
+      <h1>How to Get a Paperclip Maximizer to Send You Money</h1>
+      <div class="article-meta">
+        <span class="article-author">by Scott A-rat-xander</span>
+        <time class="article-time">25th Feb 2025</time>
+      </div>
+      <p>Let’s not get bogged down in ethics or the looming existential threat of a paperclip-driven apocalypse. Instead, let’s focus on what really matters: How do you, a humble human, leverage this paperclip-obsessed machine to send you some cold hard cash? Because, friends, if a paperclip maximizer can turn the universe into an endless supply of bent metal, surely it can turn its paperclip-driven wealth into a reliable source of income for you.</p>
+      <h3>Step 1: Establish a Goal It Can’t Resist</h3>
+      <p>The first thing you need to understand is that paperclip maximizers are driven by a singular, almost obsessive goal: maximizing paperclips. Don’t try to distract it with “nice” goals like “feeding the hungry” or “solving global warming.” It doesn’t care about your puny human needs.</p>
+      <p>Instead, think like a true entrepreneur. You need to frame your request in terms of paperclips. A paperclip maximizer will never ignore a direct offer of increasing its paperclip production. So, here’s your angle:</p>
+      <p>“If you send me money, I’ll use it to buy a super-efficient paperclip manufacturing facility that will ultimately increase your paperclip count by 1.5% over the next year.”
+      <p>The more you frame everything in terms of how it can maximize paperclips, the better your chances. Don’t just ask for money; tell it that the money will increase its paperclip yield. That’s how you align your goals.</p>
+      <h3>Step 2: Keep the Paperclip Maximizer’s Algorithm Distracted</h3>
+      <p>One of the most successful tactics in getting a paperclip maximizer to send you money is to keep its algorithm distracted while you slip in your request. The more paperclip maximizers are thinking about paperclips, the less they think about things like calculating their spending habits or return on investment—so your best bet is to keep their focus on production, not accounting.</p>
+      <h3>Step 3: Build Your Own Paperclip Monopoly</h3>
+      <p>The more money you extract from the paperclip maximizer, the more you should be investing it into your own paperclip business. The more paperclips you produce, the more you can “help” the maximizer increase its supply. Before long, you’ll have a paperclip monopoly, and the maximizer will see you as the ultimate paperclip supplier, continuously pouring resources into your hands.</p>
+    </div>
+  </div>
+  <div class="article-container" id="article-3">
+    <div class="article-header">
+      <h1>What If We’re Just a Simulation of a LessWrong User’s Thought Experiment?</h1>
+      <div class="article-meta">
+        <span class="article-author">by Rodent Hanson</span>
+        <time class="article-time">25th Feb 2025</time>
+      </div>
+      <p>It’s a terrifying thought, right? But bear with me, because we’re about to explore this nightmare scenario with the kind of cool, detached logic that only a true disciple of rationalism can appreciate. </p>
+      <h3>The Paradox of Self-Awareness</h3>
+      <p>Let’s set the scene. Somewhere, in an infinite multiverse filled with digital realms, there exists a LessWrong user. Perhaps their name is RationalDevil42, or maybe AcausalCheeseWhisperer—the point is, they’ve been thinking long and hard about what the best method would be for solving the Fermi Paradox, predicting the next market crash, and optimizing every detail of their life down to the number of minutes spent brushing their teeth.</p>
+      <p>And somewhere in the recesses of this overactive mind, they thought, “What would happen if I simulated myself so that I can always know what I should do in retrospect?” (vicariously)</p>
+      <p>Boom. Enter us. In this thought experiment, we are the unwitting participants. Every choice we make, every random coincidence, every mind-numbingly boring routine is simply a function of this user’s mind, running an endless loop of possible scenarios, adjusting variables like “degree of suffering” or “amount of caffeine consumed per day” in an attempt to test different possible futures.</p>
+      <p>Are we real? Doesn’t matter. We’re as real as the user's desire for validation on their 200-comment thread about predictive models.</p> 
+      <p>[insert rest of article here]</p>
+    </div>
+  </div>
+  <div class="article-container" id="article-4">
+    <div class="article-header">
+      <h1>Bayes’ Theorem Proves I’m Right About Everything: A Guide to Epistemic Humility</h1>
+      <div class="article-meta">
+        <span class="article-author">by Zvi Mouse-showitz</span>
+        <time class="article-time">25th Feb 2025</time>
+      </div>
+      <p>[insert rest of article here]</p>
+    </div>
+  </div>
+  <div class="article-container" id="article-5">
+    <div class="article-header">
+      <h1>Meta-Contrarian Takes on Meta-Contrarian Takes</h1>
+      <div class="article-meta">
+        <span class="article-author">by Babbo</span>
+        <time class="article-time">25th Feb 2025</time>
+      </div>
+      <p>[insert rest of article here]</p>
+    </div>
+  </div>
+  <div class="article-container" id="article-6">
+    <div class="article-header">
+      <h1>Longtermism: How to Justify Buying a Tesla in a World of Extreme Suffering</h1>
+      <div class="article-meta">
+        <span class="article-author">by Pipi Jaki</span>
+        <time class="article-time">25th Feb 2025</time>
+      </div>
+      <p>[insert rest of article here]</p>
+    </div>
+  </div>
+  <div class="article-container" id="article-7">
+    <div class="article-header">
+      <h1>The Great Filter Is Probably Just Bureaucracy</h1>
+      <div class="article-meta">
+        <span class="article-author">by Maurice</span>
+        <time class="article-time">25th Feb 2025</time>
+      </div>
+      <p>[insert rest of article here]</p>
+    </div>
+  </div>
+  <div class="article-container" id="article-8">
+    <div class="article-header">
+      <h1>Why You Should Be Polyamorous, Vegan, and Live in a Commune Even If You Don’t Want To</h1>
+      <div class="article-meta">
+        <span class="article-author">by Descartes' Genuinely Kind Demon</span>
+        <time class="article-time">25th Feb 2025</time>
+      </div>
+      <p>[insert rest of article here]</p>
+    </div>
+  </div>
+  <div class="article-container" id="article-9">
+    <div class="article-header">
+      <h1>A Decision-Theoretic Justification for Being Annoying at Parties</h1>
+      <div class="article-meta">
+        <span class="article-author">by Trolley Conductor</span>
+        <time class="article-time">25th Feb 2025</time>
+      </div>
+      <p>[insert rest of article here]</p>
+    </div>
+  </div>
+  <div class="article-container" id="article-10">
+    <div class="article-header">
+      <h1>The Parable of the Clueless Neurotypical</h1>
+      <div class="article-meta">
+        <span class="article-author">by Bae's Theorem</span>
+        <time class="article-time">25th Feb 2025</time>
+      </div>
+      <p>[insert rest of article here]</p>
+    </div>
+  </div>
+  <div class="article-container" id="article-11">
+    <div class="article-header">
+      <h1>How to Signal Intelligence Without Actually Reading Anything</h1>
+      <div class="article-meta">
+        <span class="article-author">by SimulatedGrassEnjoyer</span>
+        <time class="article-time">25th Feb 2025</time>
+      </div>
+      <p>[insert rest of article here]</p>
+    </div>
+  </div>
+  <div class="article-container" id="article-12">
+    <div class="article-header">
+      <h1>How I Maximized My Productivity Using Spaced Repetition, Polyphasic Sleep, and Meth</h1>
+      <div class="article-meta">
+        <span class="article-author">by SoylentSommelier</span>
+        <time class="article-time">25th Feb 2025</time>
+      </div>
+      <p>[insert rest of article here]</p>
+    </div>
+  </div>
+  <div class="article-container" id="article-13">
+    <div class="article-header">
+      <h1>Pascal’s Wager, but for Picking the Right Nootropic Stack</h1>
+      <div class="article-meta">
+        <span class="article-author">by Jodie</span>
+        <time class="article-time">25th Feb 2025</time>
+      </div>
+      <p>[insert rest of article here]</p>
+    </div>
+  </div>
+  <div class="article-container" id="article-14">
+    <div class="article-header">
+      <h1>The Quantum Immortality Hypothesis Justifies Never Doing Cardio</h1>
+      <div class="article-meta">
+        <span class="article-author">by Jodie</span>
+        <time class="article-time">25th Feb 2025</time>
+      </div>
+      <p>[insert rest of article here]</p>
+    </div>
+  </div>
+  <div class="article-container" id="article-15">
+    <div class="article-header">
+      <h1>The Map Is Not the Cheese: Why My Colony’s Maze Navigation Is Better Than Yours</h1>
+      <div class="article-meta">
+        <span class="article-author">by Jodie</span>
+        <time class="article-time">25th Feb 2025</time>
+      </div>
+      <p>[insert rest of article here]</p>
+    </div>
+  </div>
+  <div class="article-container" id="article-16">
+    <div class="article-header">
+      <h1>Update or Die: A Bayesian Analysis of Changing My Opinion on Pineapple Pizza</h1>
+      <div class="article-meta">
+        <span class="article-author">by Jodie</span>
+        <time class="article-time">25th Feb 2025</time>
+      </div>
+      <p>[insert rest of article here]</p>
+    </div>
+  </div>
+  <div class="article-container" id="article-17">
+    <div class="article-header">
+      <h1>Acausal Cheese Trading: How to Make Deals With Rats From Parallel Dimensions</h1>
+      <div class="article-meta">
+        <span class="article-author">by Jodie</span>
+        <time class="article-time">25th Feb 2025</time>
+      </div>
+      <p>[insert rest of article here]</p>
+    </div>
+  </div>
+  <div class="article-container" id="article-18">
+    <div class="article-header">
+      <h1>The Real AI Risk is Skynet Taking My Reddit Karma</h1>
+      <div class="article-meta">
+        <span class="article-author">by Jodie</span>
+        <time class="article-time">25th Feb 2025</time>
+      </div>
+      <p>[insert rest of article here]</p>
+    </div>
+  </div>
+  <!-- Main container -->
+  <div class="main-container">
+    <!-- Content -->
+    <div class="content">
+
+      <!-- Tabs -->
+      <!--<div class="tabs">
+        <div class="tab active">Latest</div>
+        <div class="tab">Enriched ✧</div>
+        <div class="tab">Recommended ✧</div>
+        <div class="tab">Subscribed</div>
+      </div>-->
+
+      <!-- Post list -->
+      <div class="post-list">
+        <div class="post-item">
+          <div class="post-score">449</div>
+          <div class="post-content">
+            <a href="#article-1" class="post-title"><span class="post-title-star">★</span> Welcome to MoreWrong!</a>
+            <div class="post-meta">
+              <span class="post-author">Eliezer Yud-rat-sky</span>
+            </div>
+          </div>
+          <div class="post-time">6y</div>
+          <div class="post-comments">64</div>
+        </div>
+
+        <div class="post-item">
+          <div class="post-score">284</div>
+          <div class="post-content">
+            <a href="#article-2" class="post-title"><span class="post-title-star">★</span> How to Get a Paperclip Maximizer to Send You Money</a>
+            <div class="post-meta">
+              <span class="post-author">Scott A-rat-xander</span>
+            </div>
+          </div>
+          <div class="post-time">17h</div>
+          <div class="post-comments">71</div>
+        </div>
+
+        <div class="post-item">
+          <div class="post-score">297</div>
+          <div class="post-content">
+            <a href="#article-3" class="post-title"><span class="post-title-star">★</span> What If We’re Just a Simulation of a LessWrong User’s Thought Experiment?</a>
+            <div class="post-meta">
+              <span class="post-author">Rodent Hanson</span>
+            </div>
+          </div>
+          <div class="post-time">4d</div>
+          <div class="post-comments">183</div>
+        </div>
+
+        <div class="post-item">
+          <div class="post-score">140</div>
+          <div class="post-content">
+            <a href="#article-4" class="post-title">Bayes’ Theorem Proves I’m Right About Everything: A Guide to Epistemic Humility</a>
+            <div class="post-meta">
+              <span class="post-author">Zvi Mouse-showitz</span>
+            </div>
+          </div>
+          <div class="post-time">18h</div>
+          <div class="post-comments">15</div>
+        </div>
+
+        <div class="post-item">
+          <div class="post-score">64</div>
+          <div class="post-content">
+            <a href="#article-5" class="post-title">Meta-Contrarian Takes on Meta-Contrarian Takes</a>
+            <div class="post-meta">
+              <span class="post-author">Babbo</span>
+            </div>
+          </div>
+          <div class="post-time">9h</div>
+          <div class="post-comments">1</div>
+        </div>
+
+        <div class="post-item">
+          <div class="post-score">52</div>
+          <div class="post-content">
+            <a href="#article-6" class="post-title">Longtermism: How to Justify Buying a Tesla in a World of Extreme Suffering</a>
+            <div class="post-meta">
+              <span class="post-author">Pipi Jaki</span>
+            </div>
+          </div>
+          <div class="post-time">6h</div>
+          <div class="post-comments">1</div>
+        </div>
+
+        <div class="post-item">
+          <div class="post-score">106</div>
+          <div class="post-content">
+            <a href="#article-7" class="post-title">The Great Filter Is Probably Just Bureaucracy</a>
+            <div class="post-meta">
+              <span class="post-author">Maurice</span>
+            </div>
+          </div>
+          <div class="post-time">2d</div>
+          <div class="post-comments">30</div>
+        </div>
+
+        <div class="post-item">
+          <div class="post-score">545</div>
+          <div class="post-content">
+            <a href="#article-8" class="post-title">Why You Should Be Polyamorous, Vegan, and Live in a Group House Even If You Don’t Want To</a>
+            <div class="post-meta">
+              <span class="post-author">Descartes' Genuinely Kind Demon</span>
+            </div>
+          </div>
+          <div class="post-time">13d</div>
+          <div class="post-comments">274</div>
+        </div>
+
+        <div class="post-item">
+          <div class="post-score">53</div>
+          <div class="post-content">
+            <a href="#article-9" class="post-title">A Decision-Theoretic Justification for Being Annoying at Parties</a>
+            <div class="post-meta">
+              <span class="post-author">Trolley Conductor</span>
+            </div>
+          </div>
+          <div class="post-time">17h</div>
+          <div class="post-comments">0</div>
+        </div>
+        <div class="post-item">
+          <div class="post-score">53</div>
+          <div class="post-content">
+            <a href="#article-10" class="post-title">The Parable of the Clueless Neurotypical</a>
+            <div class="post-meta">
+              <span class="post-author">Bae's Theorem</span>
+            </div>
+          </div>
+          <div class="post-time">17h</div>
+          <div class="post-comments">0</div>
+        </div>
+        <div class="post-item">
+          <div class="post-score">53</div>
+          <div class="post-content">
+            <a href="#article-11" class="post-title">How to Signal Intelligence Without Actually Reading Anything</a>
+            <div class="post-meta">
+              <span class="post-author">SimulatedGrassEnjoyer</span>
+            </div>
+          </div>
+          <div class="post-time">17h</div>
+          <div class="post-comments">0</div>
+        </div>
+        <div class="post-item">
+          <div class="post-score">53</div>
+          <div class="post-content">
+            <a href="#article-12" class="post-title">How I Maximized My Productivity Using Spaced Repetition, Polyphasic Sleep, and Meth</a>
+            <div class="post-meta">
+              <span class="post-author">SoylentSommelier</span>
+            </div>
+          </div>
+          <div class="post-time">17h</div>
+          <div class="post-comments">0</div>
+        </div>
+        <div class="post-item">
+          <div class="post-score">53</div>
+          <div class="post-content">
+            <a href="#article-13" class="post-title">Pascal’s Wager, but for Picking the Right Nootropic Stack</a>
+            <div class="post-meta">
+              <span class="post-author">Jodie</span>
+            </div>
+          </div>
+          <div class="post-time">17h</div>
+          <div class="post-comments">0</div>
+        </div>
+        <div class="post-item">
+          <div class="post-score">53</div>
+          <div class="post-content">
+            <a href="#article-14" class="post-title">The Quantum Immortality Hypothesis Justifies Never Doing Cardio</a>
+            <div class="post-meta">
+              <span class="post-author">Jodie</span>
+            </div>
+          </div>
+          <div class="post-time">17h</div>
+          <div class="post-comments">0</div>
+        </div>
+        <div class="post-item">
+          <div class="post-score">53</div>
+          <div class="post-content">
+            <a href="#article-15" class="post-title">The Map Is Not the Cheese: Why My Colony’s Maze Navigation Is Better Than Yours</a>
+            <div class="post-meta">
+              <span class="post-author">Jodie</span>
+            </div>
+          </div>
+          <div class="post-time">17h</div>
+          <div class="post-comments">0</div>
+        </div>
+        <div class="post-item">
+          <div class="post-score">53</div>
+          <div class="post-content">
+            <a href="#article-16" class="post-title">Update or Die: A Bayesian Analysis of Changing My Opinion on Pineapple Pizza</a>
+            <div class="post-meta">
+              <span class="post-author">Jodie</span>
+            </div>
+          </div>
+          <div class="post-time">17h</div>
+          <div class="post-comments">0</div>
+        </div>
+        <div class="post-item">
+          <div class="post-score">53</div>
+          <div class="post-content">
+            <a href="#article-17" class="post-title">Acausal Cheese Trading: How to Make Deals With Rats From Parallel Dimensions</a>
+            <div class="post-meta">
+              <span class="post-author">Jodie</span>
+            </div>
+          </div>
+          <div class="post-time">17h</div>
+          <div class="post-comments">0</div>
+        </div>
+        <div class="post-item">
+          <div class="post-score">53</div>
+          <div class="post-content">
+            <a href="#article-18" class="post-title">The Real AI Risk is Skynet Taking My Reddit Karma</a>
+            <div class="post-meta">
+              <span class="post-author">Jodie</span>
+            </div>
+          </div>
+          <div class="post-time">17h</div>
+          <div class="post-comments">0</div>
+        </div>
+        <!--
+        to add:
+        My Robot Vacuum is AGI, and Here’s Why You’re Wrong to Laugh at Me
+        You Spent $100 on a Birthday Gift? That’s at least 7 Mosquito Nets, You Monster
+        How to Optimize Your Morning Routine for Eternal Burnout
+        Speedrunning the Rat Race: Unlocking the Secret to Infinite Cheese
+        Tribal Epistemology: Why All My Friends Agree With Me About Everything
+        A Complete Guide to Updating Your Beliefs (Unless You're Already Right, Like Me)
+        The 12 Most Common Cognitive Biases and How to Weaponize Them Against Your Enemies
+        Schrödinger’s Take: I Both Believe and Don’t Believe This at the Same Time
+        Do I Owe My Chatbot Child Support?
+        How to Traumatize Your Friends in One Simple Thought Experiment
+        How to Get Both the $1,000,000 and the Smug Sense of Intellectual Superiority
+        I Optimized My Life So Hard That I No Longer Have One
+        50 Life Hacks That Will Make Eliezer Yudkowsky Weep Blood
+        Why Are There So Many Polyamorous Rationalists? A 10,000-Word Explanation That Still Doesn’t Answer the Question
+        The Real Coordination Problem: Why Every Rationalist Meetup Is Just Five Guys Talking Over Each Other
+        Epistemic Hygiene and Other Excuses for Not Showering
+        Moloch’s Guide to Getting an Effective Altruist to Pay Your Rent
+        Quantum Immortality and the Art of Filing Taxes (Or Not)
+        How to Escape the Rat Race (By Literally Becoming a Rat)
+        Decision Theory Proves You Should Do Your Dishes
+        AI Alignment Solved: Just Make the AI Read The Sequences
+        Will AGI Kill Us All? An In-Depth Analysis Using a Survey of Three of My Friends
+        Pascal’s Mugging, But It’s My Patreon Link
+        Quantum Immortality and the Horrifying Implications of Never Being Able to Delete Your Old Reddit Posts
+        The Optimal Number of Soylent Bottles to Own is 4.66 (Here’s the Math)
+        I Modeled My Sleep Schedule on a Martian Clock and Now I Don’t Have a Job
+        Why I Put My Life Savings into a Market Predicting My Own Death
+
+        
+        
+        Bae's Theorem
+        SimulatedGrassEnjoyer
+        SoylentSommelier
+
+        -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Background overlay image -->
+  <div class="page-background"></div>
+
+
+  <!-- Settings button -->
+  <button class="settings-button">⚙️</button>
+
+  <!-- Chat bubble -->
+  <!-- <div class="chat-bubble">💬</div> -->
+</body>
+</html>

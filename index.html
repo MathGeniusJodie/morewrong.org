@@ -11,7 +11,12 @@
     * {
       font-family: inherit;
     }
-
+    html{
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      height: 100%;
+    }
     body {
       background-color: #f8f4ee;
       margin: 0;
@@ -22,6 +27,10 @@
       color: rgba(0, 0, 0, 0.87);
       line-height: 1.5;
       font-family: lato, sans-serif;
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
     }
 
     @media (max-width: 768px) {
@@ -248,10 +257,12 @@
     .post-title {
       font-size: 20px;
       text-decoration: none;
-      display: flex;
-      align-items: baseline;
       font-family: "Crimson Pro", serif;
       color: inherit;
+    }
+    .post-title:hover {
+      text-decoration: underline;
+      opacity: 0.8;
     }
 
     .post-title-star {
@@ -361,6 +372,7 @@
       background: white;
       padding: 82px calc(50vw - 400px);
       display: none;
+      flex-grow: 1;
     }
     .article-meta{
       font-family: lato, sans-serif;
@@ -376,6 +388,11 @@
     }
     .article-time{
       margin-left: 3ch;
+    }
+    .post-title small{
+      opacity: 0.5;
+      font-family: lato, sans-serif;
+      font-size: 0.8rem;
     }
   </style>
 </head>
@@ -641,7 +658,7 @@
         <div class="post-item">
           <div class="post-score">297</div>
           <div class="post-content">
-            <a href="#article-3" class="post-title"><span class="post-title-star">★</span> What If We’re Just a Simulation of a LessWrong User’s Thought Experiment?</a>
+            <a href="#article-3" class="post-title"><span class="post-title-star">★</span> What If We’re Just a Simulation of a LessWrong User’s Thought Experiment? <small>(Work in Progress)</small></a>
             <div class="post-meta">
               <span class="post-author">Rodent Hanson</span>
             </div>
@@ -653,7 +670,7 @@
         <div class="post-item">
           <div class="post-score">140</div>
           <div class="post-content">
-            <a href="#article-4" class="post-title">Bayes’ Theorem Proves I’m Right About Everything: A Guide to Epistemic Humility</a>
+            <a href="#article-4" class="post-title">Bayes’ Theorem Proves I’m Right About Everything: A Guide to Epistemic Humility <small>(Coming Soon...)</small></a>
             <div class="post-meta">
               <span class="post-author">Zvi Mouse-showitz</span>
             </div>
@@ -665,7 +682,7 @@
         <div class="post-item">
           <div class="post-score">64</div>
           <div class="post-content">
-            <a href="#article-5" class="post-title">Meta-Contrarian Takes on Meta-Contrarian Takes</a>
+            <a href="#article-5" class="post-title">Meta-Contrarian Takes on Meta-Contrarian Takes <small>(Coming Soon...)</small></a>
             <div class="post-meta">
               <span class="post-author">Babbo</span>
             </div>
@@ -677,7 +694,7 @@
         <div class="post-item">
           <div class="post-score">52</div>
           <div class="post-content">
-            <a href="#article-6" class="post-title">Longtermism: How to Justify Buying a Tesla in a World of Extreme Suffering</a>
+            <a href="#article-6" class="post-title">Longtermism: How to Justify Buying a Tesla in a World of Extreme Suffering <small>(Coming Soon...)</small></a>
             <div class="post-meta">
               <span class="post-author">Pipi Jaki</span>
             </div>
@@ -689,7 +706,7 @@
         <div class="post-item">
           <div class="post-score">106</div>
           <div class="post-content">
-            <a href="#article-7" class="post-title">The Great Filter Is Probably Just Bureaucracy</a>
+            <a href="#article-7" class="post-title">The Great Filter Is Probably Just Bureaucracy <small>(Coming Soon...)</small></a>
             <div class="post-meta">
               <span class="post-author">Maurice</span>
             </div>
@@ -701,7 +718,7 @@
         <div class="post-item">
           <div class="post-score">545</div>
           <div class="post-content">
-            <a href="#article-8" class="post-title">Why You Should Be Polyamorous, Vegan, and Live in a Group House Even If You Don’t Want To</a>
+            <a href="#article-8" class="post-title">Why You Should Be Polyamorous, Vegan, and Live in a Group House Even If You Don’t Want To <small>(Coming "Soon"...)</small></a>
             <div class="post-meta">
               <span class="post-author">Descartes' Genuinely Kind Demon</span>
             </div>
@@ -713,7 +730,7 @@
         <div class="post-item">
           <div class="post-score">53</div>
           <div class="post-content">
-            <a href="#article-9" class="post-title">A Decision-Theoretic Justification for Being Annoying at Parties</a>
+            <a href="#article-9" class="post-title">A Decision-Theoretic Justification for Being Annoying at Parties <small>(Coming "Soon"...)</small></a>
             <div class="post-meta">
               <span class="post-author">Trolley Conductor</span>
             </div>
@@ -724,7 +741,7 @@
         <div class="post-item">
           <div class="post-score">53</div>
           <div class="post-content">
-            <a href="#article-10" class="post-title">The Parable of the Clueless Neurotypical</a>
+            <a href="#article-10" class="post-title">The Parable of the Clueless Neurotypical <small>(Coming "Soon"...)</small></a>
             <div class="post-meta">
               <span class="post-author">Bae's Theorem</span>
             </div>
@@ -735,7 +752,7 @@
         <div class="post-item">
           <div class="post-score">53</div>
           <div class="post-content">
-            <a href="#article-11" class="post-title">How to Signal Intelligence Without Actually Reading Anything</a>
+            <a href="#article-11" class="post-title">How to Signal Intelligence Without Actually Reading Anything <small>(Coming "Soon"...)</small></a>
             <div class="post-meta">
               <span class="post-author">SimulatedGrassEnjoyer</span>
             </div>
@@ -746,7 +763,7 @@
         <div class="post-item">
           <div class="post-score">53</div>
           <div class="post-content">
-            <a href="#article-12" class="post-title">How I Maximized My Productivity Using Spaced Repetition, Polyphasic Sleep, and Meth</a>
+            <a href="#article-12" class="post-title">How I Maximized My Productivity Using Spaced Repetition, Polyphasic Sleep, and Meth <small>(Coming "Soon"...)</small></a>
             <div class="post-meta">
               <span class="post-author">SoylentSommelier</span>
             </div>
@@ -757,7 +774,7 @@
         <div class="post-item">
           <div class="post-score">53</div>
           <div class="post-content">
-            <a href="#article-13" class="post-title">Pascal’s Wager, but for Picking the Right Nootropic Stack</a>
+            <a href="#article-13" class="post-title">Pascal’s Wager, but for Picking the Right Nootropic Stack <small>(Coming "Soon"...)</small></a>
             <div class="post-meta">
               <span class="post-author">Jodie</span>
             </div>
@@ -768,7 +785,7 @@
         <div class="post-item">
           <div class="post-score">53</div>
           <div class="post-content">
-            <a href="#article-14" class="post-title">The Quantum Immortality Hypothesis Justifies Never Doing Cardio</a>
+            <a href="#article-14" class="post-title">The Quantum Immortality Hypothesis Justifies Never Doing Cardio <small>(Coming "Soon"...)</small></a>
             <div class="post-meta">
               <span class="post-author">Jodie</span>
             </div>
@@ -779,7 +796,7 @@
         <div class="post-item">
           <div class="post-score">53</div>
           <div class="post-content">
-            <a href="#article-15" class="post-title">The Map Is Not the Cheese: Why My Colony’s Maze Navigation Is Better Than Yours</a>
+            <a href="#article-15" class="post-title">The Map Is Not the Cheese: Why My Colony’s Maze Navigation Is Better Than Yours <small>(Coming "Soon"...)</small></a>
             <div class="post-meta">
               <span class="post-author">Jodie</span>
             </div>
@@ -790,7 +807,7 @@
         <div class="post-item">
           <div class="post-score">53</div>
           <div class="post-content">
-            <a href="#article-16" class="post-title">Update or Die: A Bayesian Analysis of Changing My Opinion on Pineapple Pizza</a>
+            <a href="#article-16" class="post-title">Update or Die: A Bayesian Analysis of Changing My Opinion on Pineapple Pizza <small>(Coming "Soon"...)</small></a>
             <div class="post-meta">
               <span class="post-author">Jodie</span>
             </div>
@@ -801,7 +818,7 @@
         <div class="post-item">
           <div class="post-score">53</div>
           <div class="post-content">
-            <a href="#article-17" class="post-title">Acausal Cheese Trading: How to Make Deals With Rats From Parallel Dimensions</a>
+            <a href="#article-17" class="post-title">Acausal Cheese Trading: How to Make Deals With Rats From Parallel Dimensions <small>(Coming "Soon"...)</small></a>
             <div class="post-meta">
               <span class="post-author">Jodie</span>
             </div>
@@ -812,7 +829,7 @@
         <div class="post-item">
           <div class="post-score">53</div>
           <div class="post-content">
-            <a href="#article-18" class="post-title">The Real AI Risk is Skynet Taking My Reddit Karma</a>
+            <a href="#article-18" class="post-title">The Real AI Risk is Skynet Taking My Reddit Karma <small>(Coming "Soon"...)</small></a>
             <div class="post-meta">
               <span class="post-author">Jodie</span>
             </div>

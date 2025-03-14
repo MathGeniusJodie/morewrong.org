@@ -124,6 +124,9 @@
         font-family: "Crimson Pro", serif;
         color: inherit;
       }
+      .post-title:visited {
+        color: rgba(0, 0, 0, 0.6);
+      }
       .post-title:hover {
         text-decoration: underline;
         opacity: 0.8;
@@ -231,6 +234,53 @@
       .article-by {
         font-weight: normal;
       }
+      .post-comments-box {
+        font-family: Lato, sans-serif;
+        margin-bottom: 17px;
+        margin-top: 4lh;
+      }
+      .post-comment {
+        border: 1px solid rgba(72, 94, 144, 0.16);
+        border-radius: 3px;
+        padding: 12px;
+        position: relative;
+        margin: 17px 0;
+        padding-bottom: 0;
+      }
+      .post-author {
+        font-weight: bold;
+      }
+      .comment-button {
+        color: #69886e;
+        padding: 0.5em 1em;
+        border-radius: 4px;
+        position: absolute;
+        right: 12px;
+        bottom: 12px;
+        text-decoration: none;
+      }
+      .comment-button:hover {
+        background: #69886e;
+        color: #fff;
+      }
+      .downvote-button,
+      .upvote-button,
+      .minus-button,
+      .plus-button {
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-weight: bold;
+        font-family: sans-serif;
+        opacity: 0.5;
+      }
+      .comment-button-spacer {
+        width: 1ch;
+        display: inline-block;
+      }
+      .post-comment .post-comment {
+        background: #eee;
+      }
     </style>
   </head>
   <body>
@@ -253,7 +303,7 @@
         <span class="article-author"
           ><span class="article-by">by</span> Eliezer Yud-rat-sky</span
         >
-        <time class="article-time">25th Feb 2025</time>
+        <time class="article-time">13th Mar 2025</time>
       </div>
       <p>
         MoreWrong is an online forum and community dedicated to impair human
@@ -311,6 +361,104 @@
         Embrace your inner delusion. At MoreWrong, being wrong is the only right
         answer.
       </p>
+      <div class="post-comments-box">
+        <div class="post-comment">
+          <span class="post-author">New Comment</span>
+          <p>Text goes here! Pull request to add a comment!</p>
+          <a
+            href="https://github.com/MathGeniusJodie/morewrong.org"
+            class="comment-button"
+            >Comment</a
+          >
+        </div>
+        <div class="post-comment">
+          <span class="post-author">Anonymous</span>
+          <button class="downvote-button">&#9660;</button>
+          <span class="comment-score">10</span>
+          <button class="upvote-button">&#9650;</button>
+          <span class="comment-button-spacer"></span>
+          <button class="minus-button">-</button>
+          <span class="comment-score-2">5</span>
+          <button class="plus-button">+</button>
+          <p>
+            I love this! I’ve been trying to be wrong for years, and now I
+            finally have a community that supports my efforts. Thank you,
+            MoreWrong!
+          </p>
+          <div class="post-comment">
+            <span class="post-author">Anonymous</span>
+            <button class="downvote-button">&#9660;</button>
+            <span class="comment-score">7</span>
+            <button class="upvote-button">&#9650;</button>
+            <span class="comment-button-spacer"></span>
+            <button class="minus-button">-</button>
+            <span class="comment-score-2">4</span>
+            <button class="plus-button">+</button>
+            <p>
+              Amen! I’ve been trying to convince my friends that being wrong is
+              the new right for ages. They just don’t get it!
+            </p>
+          </div>
+        </div>
+        <div class="post-comment">
+          <span class="post-author">Anonymous</span>
+          <button class="downvote-button">&#9660;</button>
+          <span class="comment-score">1</span>
+          <button class="upvote-button">&#9650;</button>
+          <span class="comment-button-spacer"></span>
+          <button class="minus-button">-</button>
+          <span class="comment-score-2">3</span>
+          <button class="plus-button">+</button>
+          <p>
+            I’ve always thought that being wrong was a sign of weakness. But now
+            I see it as a badge of honor. I’m ready to embrace my inner
+            delusion!
+          </p>
+        </div>
+        <div class="post-comment">
+          <span class="post-author">Anonymous</span>
+          <button class="downvote-button">&#9660;</button>
+          <span class="comment-score">6</span>
+          <button class="upvote-button">&#9650;</button>
+          <span class="comment-button-spacer"></span>
+          <button class="minus-button">-</button>
+          <span class="comment-score-2">1</span>
+          <button class="plus-button">+</button>
+          <p>
+            I’ve been a member of MoreWrong for a week now, and I can already
+            feel my cognitive dissonance levels rising. It’s exhilarating!
+          </p>
+        </div>
+        <div class="post-comment">
+          <span class="post-author">Anonymous</span>
+          <button class="downvote-button">&#9660;</button>
+          <span class="comment-score">12</span>
+          <button class="upvote-button">&#9650;</button>
+          <span class="comment-button-spacer"></span>
+          <button class="minus-button">-</button>
+          <span class="comment-score-2">1</span>
+          <button class="plus-button">+</button>
+          <p>
+            I used to think that being wrong was a bad thing. But now I see it
+            as an opportunity for growth. Thank you, MoreWrong, for opening my
+            eyes!
+          </p>
+        </div>
+        <div class="post-comment">
+          <span class="post-author">Anonymous</span>
+          <button class="downvote-button">&#9660;</button>
+          <span class="comment-score">0</span>
+          <button class="upvote-button">&#9650;</button>
+          <span class="comment-button-spacer"></span>
+          <button class="minus-button">-</button>
+          <span class="comment-score-2">3</span>
+          <button class="plus-button">+</button>
+          <p>
+            MoreWrong has given me the tools I need to be as wrong as possible.
+            I’m ready to take on the world!
+          </p>
+        </div>
+      </div>
     </div>
     <div class="article-container" id="article-2">
       <h1>How to Get a Paperclip Maximizer to Send You Money</h1>
@@ -318,7 +466,7 @@
         <span class="article-author"
           ><span class="article-by">by</span> Scott A-rat-xander</span
         >
-        <time class="article-time">25th Feb 2025</time>
+        <time class="article-time">13th Mar 2025</time>
       </div>
       <p>
         Let’s not get bogged down in ethics or the looming existential threat of
@@ -370,6 +518,67 @@
         maximizer will see you as the ultimate paperclip supplier, continuously
         pouring resources into your hands.
       </p>
+      <div class="post-comments-box">
+        <div class="post-comment">
+          <span class="post-author">New Comment</span>
+          <p>Text goes here! Pull request to add a comment!</p>
+          <a
+            href="https://github.com/MathGeniusJodie/morewrong.org"
+            class="comment-button"
+            >Comment</a
+          >
+        </div>
+        <div class="post-comment">
+          <span class="post-author">Anonymous</span>
+          <button class="downvote-button">&#9660;</button>
+          <span class="comment-score">10</span>
+          <button class="upvote-button">&#9650;</button>
+          <span class="comment-button-spacer"></span>
+          <button class="minus-button">-</button>
+          <span class="comment-score-2">5</span>
+          <button class="plus-button">+</button>
+          <p>
+            This is brilliant! This can literally not go tits-up! We're going to
+            the moon boys!
+          </p>
+          <div class="post-comment">
+            <span class="post-author">Anonymous</span>
+            <button class="downvote-button">&#9660;</button>
+            <span class="comment-score">10</span>
+            <button class="upvote-button">&#9650;</button>
+            <span class="comment-button-spacer"></span>
+            <button class="minus-button">-</button>
+            <span class="comment-score-2">5</span>
+            <button class="plus-button">+</button>
+            <p>I'll give you all my retirement savings for a 20% share!</p>
+          </div>
+          <div class="post-comment">
+            <span class="post-author">Anonymous</span>
+            <button class="downvote-button">&#9660;</button>
+            <span class="comment-score">10</span>
+            <button class="upvote-button">&#9650;</button>
+            <span class="comment-button-spacer"></span>
+            <button class="minus-button">-</button>
+            <span class="comment-score-2">5</span>
+            <button class="plus-button">+</button>
+            <p>May I recommend just buying XEQT.</p>
+          </div>
+        </div>
+        <div class="post-comment">
+          <span class="post-author">Anonymous</span>
+          <button class="downvote-button">&#9660;</button>
+          <span class="comment-score">10</span>
+          <button class="upvote-button">&#9650;</button>
+          <span class="comment-button-spacer"></span>
+          <button class="minus-button">-</button>
+          <span class="comment-score-2">5</span>
+          <button class="plus-button">+</button>
+          <p>
+            This is so unethical! I can’t wait to start my own! Thanks for the
+            tips!
+          </p>
+        </div>
+      </div>
     </div>
     <div class="article-container" id="article-3">
       <h1>
@@ -380,7 +589,7 @@
         <span class="article-author"
           ><span class="article-by">by</span> Rodent Hanson</span
         >
-        <time class="article-time">25th Feb 2025</time>
+        <time class="article-time">14th Mar 2025</time>
       </div>
       <p>
         It’s a terrifying thought, right? But bear with me, because we’re about
@@ -527,6 +736,31 @@
         hyper-rationalist’s mind, at least we can take comfort in the fact that
         we’re a well-reasoned, utility-maximizing figment.
       </p>
+      <div class="post-comments-box">
+        <div class="post-comment">
+          <span class="post-author">New Comment</span>
+          <p>Text goes here! Pull request to add a comment!</p>
+          <a
+            href="https://github.com/MathGeniusJodie/morewrong.org"
+            class="comment-button"
+            >Comment</a
+          >
+        </div>
+        <div class="post-comment">
+          <span class="post-author">Anonymous</span>
+          <button class="downvote-button">&#9660;</button>
+          <span class="comment-score">10</span>
+          <button class="upvote-button">&#9650;</button>
+          <span class="comment-button-spacer"></span>
+          <button class="minus-button">-</button>
+          <span class="comment-score-2">5</span>
+          <button class="plus-button">+</button>
+          <p>
+            I'm not sure if I should be terrified or amused by this. Either way,
+            I'm going to keep manifesting apples just in case.
+          </p>
+        </div>
+      </div>
     </div>
     <div class="article-container" id="article-4">
       <h1>
@@ -537,7 +771,7 @@
         <span class="article-author"
           ><span class="article-by">by</span> Zvi Mouse-showitz</span
         >
-        <time class="article-time">25th Feb 2025</time>
+        <time class="article-time">14th Mar 2025</time>
       </div>
       <p>
         Let’s face it: being right is exhausting. You have to sift through
@@ -685,6 +919,32 @@
         Bayesian reasoning—because why adjust your beliefs when you can just
         adjust the math?
       </p>
+      <div class="post-comments-box">
+        <div class="post-comment">
+          <span class="post-author">New Comment</span>
+          <p>Text goes here! Pull request to add a comment!</p>
+          <a
+            href="https://github.com/MathGeniusJodie/morewrong.org"
+            class="comment-button"
+            >Comment</a
+          >
+        </div>
+        <div class="post-comment">
+          <span class="post-author">Anonymous</span>
+          <button class="downvote-button">&#9660;</button>
+          <span class="comment-score">10</span>
+          <button class="upvote-button">&#9650;</button>
+          <span class="comment-button-spacer"></span>
+          <button class="minus-button">-</button>
+          <span class="comment-score-2">5</span>
+          <button class="plus-button">+</button>
+          <p>
+            I always knew in the bottom of my heart that I was right about
+            everything. This article has given me the confidence to finally
+            embrace my beliefs!
+          </p>
+        </div>
+      </div>
     </div>
     <div class="article-container" id="article-5">
       <h1>Meta-Contrarian Takes on Meta-Contrarian Takes</h1>
@@ -692,7 +952,7 @@
         <span class="article-author"
           ><span class="article-by">by</span> Babbo</span
         >
-        <time class="article-time">25th Feb 2025</time>
+        <time class="article-time">14th Mar 2025</time>
       </div>
 
       <h3>Introduction: The Contrarian Ouroboros</h3>
@@ -796,6 +1056,42 @@
         And that’s exactly why I refuse to conclude this article properly. Make
         of that what you will.
       </p>
+      <div class="post-comments-box">
+        <div class="post-comment">
+          <span class="post-author">New Comment</span>
+          <p>Text goes here! Pull request to add a comment!</p>
+          <a
+            href="https://github.com/MathGeniusJodie/morewrong.org"
+            class="comment-button"
+            >Comment</a
+          >
+        </div>
+        <div class="post-comment">
+          <span class="post-author">Anonymous</span>
+          <button class="downvote-button">&#9660;</button>
+          <span class="comment-score">1</span>
+          <button class="upvote-button">&#9650;</button>
+          <span class="comment-button-spacer"></span>
+          <button class="minus-button">-</button>
+          <span class="comment-score-2">69</span>
+          <button class="plus-button">+</button>
+          <p>I can't wait to use this to gaslight the local street skitzo!</p>
+          <div class="post-comment">
+            <span class="post-author">Anonymous</span>
+            <button class="downvote-button">&#9660;</button>
+            <span class="comment-score">7</span>
+            <button class="upvote-button">&#9650;</button>
+            <span class="comment-button-spacer"></span>
+            <button class="minus-button">-</button>
+            <span class="comment-score-2">4</span>
+            <button class="plus-button">+</button>
+            <p>
+              This is so problematic. I can't believe you would say something
+              like this. This just shows how fascist rationalists are.
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="article-container" id="article-6">
       <h1>
@@ -806,7 +1102,7 @@
         <span class="article-author"
           ><span class="article-by">by</span> Pipi Jaki</span
         >
-        <time class="article-time">25th Feb 2025</time>
+        <time class="article-time">14th Mar 2025</time>
       </div>
       <p>[insert rest of article here]</p>
     </div>
@@ -817,7 +1113,7 @@
         <span class="article-author"
           ><span class="article-by">by</span> Maurice</span
         >
-        <time class="article-time">25th Feb 2025</time>
+        <time class="article-time">13th Mar 2025</time>
       </div>
       <p>[insert rest of article here]</p>
     </div>
@@ -832,7 +1128,7 @@
           ><span class="article-by">by</span> Descartes' Genuinely Kind
           Demon</span
         >
-        <time class="article-time">25th Feb 2025</time>
+        <time class="article-time">13th Mar 2025</time>
       </div>
       <p>[insert rest of article here]</p>
     </div>
@@ -843,7 +1139,7 @@
         <span class="article-author"
           ><span class="article-by">by</span> Trolley Conductor</span
         >
-        <time class="article-time">25th Feb 2025</time>
+        <time class="article-time">13th Mar 2025</time>
       </div>
       <p>[insert rest of article here]</p>
     </div>
@@ -854,7 +1150,7 @@
         <span class="article-author"
           ><span class="article-by">by</span> Bae's Theorem</span
         >
-        <time class="article-time">25th Feb 2025</time>
+        <time class="article-time">13th Mar 2025</time>
       </div>
       <p>[insert rest of article here]</p>
     </div>
@@ -865,7 +1161,7 @@
         <span class="article-author"
           ><span class="article-by">by</span> SimulatedGrassEnjoyer</span
         >
-        <time class="article-time">25th Feb 2025</time>
+        <time class="article-time">13th Mar 2025</time>
       </div>
       <p>[insert rest of article here]</p>
     </div>
@@ -879,7 +1175,7 @@
         <span class="article-author"
           ><span class="article-by">by</span> SoylentSommelier</span
         >
-        <time class="article-time">25th Feb 2025</time>
+        <time class="article-time">13th Mar 2025</time>
       </div>
       <p>[insert rest of article here]</p>
     </div>
@@ -888,9 +1184,9 @@
       <h1>Pascal’s Wager, but for Picking the Right Nootropic Stack</h1>
       <div class="article-meta">
         <span class="article-author"
-          ><span class="article-by">by</span> DorkArts</span
+          ><span class="article-by">by</span> UtilityMarximizer</span
         >
-        <time class="article-time">25th Feb 2025</time>
+        <time class="article-time">13th Mar 2025</time>
       </div>
       <p>[insert rest of article here]</p>
     </div>
@@ -899,9 +1195,9 @@
       <h1>The Quantum Immortality Hypothesis Justifies Never Doing Cardio</h1>
       <div class="article-meta">
         <span class="article-author"
-          ><span class="article-by">by</span> Jodie</span
+          ><span class="article-by">by</span> Awoogathy</span
         >
-        <time class="article-time">25th Feb 2025</time>
+        <time class="article-time">13th Mar 2025</time>
       </div>
       <p>[insert rest of article here]</p>
     </div>
@@ -913,9 +1209,9 @@
       </h1>
       <div class="article-meta">
         <span class="article-author"
-          ><span class="article-by">by</span> Jodie</span
+          ><span class="article-by">by</span> DorkArts</span
         >
-        <time class="article-time">25th Feb 2025</time>
+        <time class="article-time">13th Mar 2025</time>
       </div>
       <p>[insert rest of article here]</p>
     </div>
@@ -927,9 +1223,9 @@
       </h1>
       <div class="article-meta">
         <span class="article-author"
-          ><span class="article-by">by</span> Jodie</span
+          ><span class="article-by">by</span> Anti-forecaster</span
         >
-        <time class="article-time">25th Feb 2025</time>
+        <time class="article-time">13th Mar 2025</time>
       </div>
       <p>[insert rest of article here]</p>
     </div>
@@ -941,9 +1237,9 @@
       </h1>
       <div class="article-meta">
         <span class="article-author"
-          ><span class="article-by">by</span> Jodie</span
+          ><span class="article-by">by</span> ArgumentVampire</span
         >
-        <time class="article-time">25th Feb 2025</time>
+        <time class="article-time">13th Mar 2025</time>
       </div>
       <p>[insert rest of article here]</p>
     </div>
@@ -952,9 +1248,34 @@
       <h1>The Real AI Risk is Skynet Taking My Reddit Karma</h1>
       <div class="article-meta">
         <span class="article-author"
-          ><span class="article-by">by</span> Jodie</span
+          ><span class="article-by">by</span> WellActuallyGuy</span
         >
-        <time class="article-time">25th Feb 2025</time>
+        <time class="article-time">13th Mar 2025</time>
+      </div>
+      <p>[insert rest of article here]</p>
+    </div>
+
+    <div class="article-container" id="article-19">
+      <h1>
+        My Robot Vacuum is AGI, and Here’s Why You’re Wrong to Laugh at Me
+      </h1>
+      <div class="article-meta">
+        <span class="article-author"
+          ><span class="article-by">by</span> PostPostPostRat</span
+        >
+        <time class="article-time">13th Mar 2025</time>
+      </div>
+      <p>[insert rest of article here]</p>
+    </div>
+    <div class="article-container" id="article-20">
+      <h1>
+        You Spent $100 on a Birthday Gift? That’s at least 7 Mosquito Nets, You Monster
+      </h1>
+      <div class="article-meta">
+        <span class="article-author"
+          ><span class="article-by">by</span> PredictablyWrong</span
+        >
+        <time class="article-time">13th Mar 2025</time>
       </div>
       <p>[insert rest of article here]</p>
     </div>
@@ -963,14 +1284,6 @@
     <div class="main-container">
       <!-- Content -->
       <div class="content">
-        <!-- Tabs -->
-        <!--<div class="tabs">
-        <div class="tab active">Latest</div>
-        <div class="tab">Enriched ✧</div>
-        <div class="tab">Recommended ✧</div>
-        <div class="tab">Subscribed</div>
-      </div>-->
-
         <!-- Post list -->
         <div class="post-list">
           <div class="post-item">
@@ -983,7 +1296,7 @@
                 <span class="post-author">Eliezer Yud-rat-sky</span>
               </div>
             </div>
-            <div class="post-time">6y</div>
+            <div class="post-time">1d</div>
             <div class="post-comments">64</div>
           </div>
 
@@ -998,7 +1311,7 @@
                 <span class="post-author">Scott A-rat-xander</span>
               </div>
             </div>
-            <div class="post-time">17h</div>
+            <div class="post-time">1d</div>
             <div class="post-comments">71</div>
           </div>
 
@@ -1013,7 +1326,7 @@
                 <span class="post-author">Rodent Hanson</span>
               </div>
             </div>
-            <div class="post-time">4d</div>
+            <div class="post-time">1d</div>
             <div class="post-comments">183</div>
           </div>
 
@@ -1028,7 +1341,7 @@
                 <span class="post-author">Zvi Mouse-showitz</span>
               </div>
             </div>
-            <div class="post-time">18h</div>
+            <div class="post-time">2h</div>
             <div class="post-comments">15</div>
           </div>
 
@@ -1042,7 +1355,7 @@
                 <span class="post-author">Babbo</span>
               </div>
             </div>
-            <div class="post-time">9h</div>
+            <div class="post-time">2h</div>
             <div class="post-comments">1</div>
           </div>
 
@@ -1057,7 +1370,7 @@
                 <span class="post-author">Pipi Jaki</span>
               </div>
             </div>
-            <div class="post-time">6h</div>
+            <div class="post-time">NA</div>
             <div class="post-comments">1</div>
           </div>
 
@@ -1072,7 +1385,7 @@
                 <span class="post-author">Maurice</span>
               </div>
             </div>
-            <div class="post-time">2d</div>
+            <div class="post-time">NA</div>
             <div class="post-comments">30</div>
           </div>
 
@@ -1087,7 +1400,7 @@
                 <span class="post-author">Descartes' Genuinely Kind Demon</span>
               </div>
             </div>
-            <div class="post-time">13d</div>
+            <div class="post-time">NA</div>
             <div class="post-comments">274</div>
           </div>
 
@@ -1102,7 +1415,7 @@
                 <span class="post-author">Trolley Conductor</span>
               </div>
             </div>
-            <div class="post-time">17h</div>
+            <div class="post-time">NA</div>
             <div class="post-comments">0</div>
           </div>
           <div class="post-item">
@@ -1116,7 +1429,7 @@
                 <span class="post-author">Bae's Theorem</span>
               </div>
             </div>
-            <div class="post-time">17h</div>
+            <div class="post-time">NA</div>
             <div class="post-comments">0</div>
           </div>
           <div class="post-item">
@@ -1130,7 +1443,7 @@
                 <span class="post-author">SimulatedGrassEnjoyer</span>
               </div>
             </div>
-            <div class="post-time">17h</div>
+            <div class="post-time">NA</div>
             <div class="post-comments">0</div>
           </div>
           <div class="post-item">
@@ -1144,7 +1457,7 @@
                 <span class="post-author">SoylentSommelier</span>
               </div>
             </div>
-            <div class="post-time">17h</div>
+            <div class="post-time">NA</div>
             <div class="post-comments">0</div>
           </div>
           <div class="post-item">
@@ -1158,7 +1471,7 @@
                 <span class="post-author">UtilityMarximizer</span>
               </div>
             </div>
-            <div class="post-time">17h</div>
+            <div class="post-time">NA</div>
             <div class="post-comments">0</div>
           </div>
           <div class="post-item">
@@ -1172,7 +1485,7 @@
                 <span class="post-author">Awoogathy</span>
               </div>
             </div>
-            <div class="post-time">17h</div>
+            <div class="post-time">NA</div>
             <div class="post-comments">0</div>
           </div>
           <div class="post-item">
@@ -1183,10 +1496,10 @@
                 Better Than Yours <small>(Coming "Soon"...)</small></a
               >
               <div class="post-meta">
-                <span class="post-author">Jodie</span>
+                <span class="post-author">DorkArts</span>
               </div>
             </div>
-            <div class="post-time">17h</div>
+            <div class="post-time">NA</div>
             <div class="post-comments">0</div>
           </div>
           <div class="post-item">
@@ -1197,10 +1510,10 @@
                 Pineapple Pizza <small>(Coming "Soon"...)</small></a
               >
               <div class="post-meta">
-                <span class="post-author">Jodie</span>
+                <span class="post-author">Anti-forecaster</span>
               </div>
             </div>
-            <div class="post-time">17h</div>
+            <div class="post-time">NA</div>
             <div class="post-comments">0</div>
           </div>
           <div class="post-item">
@@ -1211,10 +1524,10 @@
                 Parallel Dimensions <small>(Coming "Soon"...)</small></a
               >
               <div class="post-meta">
-                <span class="post-author">Jodie</span>
+                <span class="post-author">ArgumentVampire</span>
               </div>
             </div>
-            <div class="post-time">17h</div>
+            <div class="post-time">NA</div>
             <div class="post-comments">0</div>
           </div>
           <div class="post-item">
@@ -1225,15 +1538,45 @@
                 <small>(Coming "Soon"...)</small></a
               >
               <div class="post-meta">
-                <span class="post-author">Jodie</span>
+                <span class="post-author">WellActuallyGuy</span>
               </div>
             </div>
-            <div class="post-time">17h</div>
+            <div class="post-time">NA</div>
             <div class="post-comments">0</div>
           </div>
+          <div class="post-item">
+            <div class="post-score">53</div>
+            <div class="post-content">
+              <a href="#article-19" class="post-title"
+                >My Robot Vacuum is AGI, and Here’s Why You’re Wrong to Laugh at
+                Me <small>(Coming "Soon"...)</small></a
+              >
+              <div class="post-meta">
+                <span class="post-author">PostPostPostRat</span>
+              </div>
+            </div>
+            <div class="post-time">NA</div>
+            <div class="post-comments">0</div>
+          </div>
+          <div class="post-item">
+            <div class="post-score">53</div>
+            <div class="post-content">
+              <a href="#article-20" class="post-title"
+                >You Spent $100 on a Birthday Gift? That’s at least 7 Mosquito Nets, You Monster
+                <small>(Coming "Soon"...)</small></a
+              >
+              <div class="post-meta">
+                <span class="post-author">PredictablyWrong</span>
+              </div>
+            </div>
+            <div class="post-time">NA</div>
+            <div class="post-comments">0</div>
+          </div>
+
+
           <!--
         to add:
-        My Robot Vacuum is AGI, and Here’s Why You’re Wrong to Laugh at Me
+
         You Spent $100 on a Birthday Gift? That’s at least 7 Mosquito Nets, You Monster
         How to Optimize Your Morning Routine for Eternal Burnout
         Speedrunning the Rat Race: Unlocking the Secret to Infinite Cheese

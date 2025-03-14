@@ -394,6 +394,19 @@
       font-family: lato, sans-serif;
       font-size: 0.8rem;
     }
+    .add-post{
+      display:block;
+      padding: 3em;
+      text-align: center;
+      width: 100%;
+    }
+    .add-post:not(:hover){
+      color: inherit;
+      text-decoration: none;
+    }
+    .article-container:target ~ .add-post{
+      display: none;
+    }
   </style>
 </head>
 <body>
@@ -878,14 +891,8 @@
     </div>
   </div>
 
-  <!-- Background overlay image -->
-  <div class="page-background"></div>
-
-
-  <!-- Settings button -->
-  <button class="settings-button">⚙️</button>
-
-  <!-- Chat bubble -->
-  <!-- <div class="chat-bubble">💬</div> -->
+  <a href="https://github.com/MathGeniusJodie/morewrong.org" class="add-post">
+    Contribute to MoreWrong by adding a post!
+  </a>
 </body>
 </html>

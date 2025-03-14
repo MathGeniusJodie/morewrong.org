@@ -8,5 +8,6 @@ We welcome contributions from anyone! Just make a pull request and we'll merge i
 
 ### Writers and Credits
 * [Jodie](https://jodie.website)
+* [ChatGPT](https://openai.com/chatgpt)
 
 This is a satire of https://lesswrong.com

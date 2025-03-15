@@ -104,7 +104,7 @@ details:hover, details:focus-within {
   width: 40px;
   text-align: center;
   padding-right: 1rem;
-  color: rgba(0, 0, 0, 0.35);
+  color: rgba(0, 0, 0, 0.5);
 }
 
 .post-content {
@@ -136,7 +136,7 @@ details:hover, details:focus-within {
   display: flex;
   align-items: center;
   font-size: 0.85rem;
-  color: #888;
+  color: rgba(0, 0, 0, 0.5);
   margin-top: 0.25rem;
   text-align: right;
 }
@@ -151,7 +151,7 @@ details:hover, details:focus-within {
   text-align: center;
   font-size: 0.85rem;
   padding: 0.25rem 0.5rem;
-  background-color: rgba(0, 0, 0, 0.35);
+  background-color: rgba(0, 0, 0, 0.5);
   border-radius: 4px;
   color: #fff;
   border-bottom-right-radius: 0;
@@ -162,7 +162,7 @@ details:hover, details:focus-within {
   display: block;
   width: 0;
   height: 0;
-  border-right: 8px solid #aaa;
+  border-right: 8px solid rgba(0, 0, 0, 0.5);
   border-top: 0 solid transparent;
   border-bottom: 8px solid transparent;
   position: absolute;
@@ -174,7 +174,7 @@ details:hover, details:focus-within {
   width: 60px;
   text-align: center;
   font-size: 0.85rem;
-  color: rgba(0, 0, 0, 0.35);
+  color: rgba(0, 0, 0, 0.5);
 }
 
 h1 {

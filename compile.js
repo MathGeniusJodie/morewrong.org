@@ -58,10 +58,7 @@ const htmlTemplate = `
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="alternate" type="application/feed+xml" title="MoreWrong RSS Feed" href="/feed.xml" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400..900;1,400..900&amp;family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&amp;display=swap"
-            rel="stylesheet"
-        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
         <title>MoreWrong</title>
         <style>${cssContent}</style>
     </head>
@@ -94,6 +91,10 @@ const htmlTemplate = `
         <a href="https://github.com/MathGeniusJodie/morewrong.org" class="add-post">
             Contribute to MoreWrong by adding a post!
         </a>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400..900;1,400..900&amp;family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&amp;display=swap"
+          rel="stylesheet"
+        />
     </body>
 </html>
 `;

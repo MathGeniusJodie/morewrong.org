@@ -8,6 +8,7 @@ We welcome contributions from anyone! Just make a pull request and we'll merge i
 
 ### Writers and Credits
 * [Jodie](https://jodie.website)
+* [Sigourney](https://www.tumblr.com/razorbladerockpit)
 * [ChatGPT](https://openai.com/chatgpt)
 
 This is a satire of https://lesswrong.com

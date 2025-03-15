@@ -272,7 +272,15 @@ function shortHumanize(date) {
   const ms = new Date(date).getTime();
   const now = Date.now();
   const diff = now - ms;
-  const units = { y: 31536000000, d: 86400000, h: 3600000, m: 60000, s: 1000 };
+  const units = { 
+    y: 365*24*60*60*1000,
+    M: 30*24*60*60*1000,
+    w: 7*24*60*60*1000,
+    d: 24*60*60*1000, 
+    h: 60*60*1000, 
+    m: 60*1000,
+    s: 1000 
+  };
   for (const [unit, value] of Object.entries(units)) {
     if (diff >= value) return Math.round(diff / value) + unit;
   }
@@ -331,8 +339,10 @@ function generatePostListHTML(files) {
                 <span class="post-author">${attributes.author}</span>
               </div>
             </div>
-            <div class="post-time">${shortHumanize(attributes.date)}</div>
-            <div class="post-comments">${attributes.commentsCount}</div>
+            <div class="post-metrics">
+              <div class="post-time">${shortHumanize(attributes.date)}</div>
+              <div class="post-comments">${attributes.commentsCount}</div>
+            </div>
           </div>
         `;
     if (attributes.date === "NA") {

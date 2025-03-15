@@ -24,6 +24,13 @@ body {
   align-items: stretch;
 }
 
+a{
+  color: #327e09;
+}
+a:visited {
+  color: rebeccapurple;
+}
+
 @media (max-width: 900px) {
   body {
     background-size: contain;
@@ -64,7 +71,7 @@ header {
 .logo {
   font-size: 27px;
   text-decoration: none;
-  color: #333;
+  color: inherit !important;
   font-family: "Crimson Pro", serif;
 }
 
@@ -89,6 +96,7 @@ header {
   border-bottom: 1px solid #f0f0f0;
   border-top: 1px solid #f0f0f0;
   align-items: center;
+  gap:1em
 }
 summary {
   padding: 0.75rem;
@@ -101,9 +109,8 @@ details:hover, details:focus-within {
 }
 
 .post-score {
-  width: 40px;
+  min-width: 2ch;
   text-align: center;
-  padding-right: 1rem;
   color: rgba(0, 0, 0, 0.6);
 }
 
@@ -112,6 +119,7 @@ details:hover, details:focus-within {
   align-items: center;
   justify-content: space-between;
   flex: 1;
+  gap:.5em;
 }
 
 .post-title {
@@ -171,7 +179,7 @@ details:hover, details:focus-within {
 }
 
 .post-time {
-  width: 60px;
+  min-width: 2ch;
   text-align: center;
   font-size: 0.85rem;
   color: rgba(0, 0, 0, 0.6);
@@ -179,6 +187,7 @@ details:hover, details:focus-within {
 
 h1 {
   font-size: 3.75rem;
+  font-size: min(10vw, 3.75rem);
   line-height: 1em;
   font-weight: 300;
 }
@@ -247,7 +256,7 @@ ol {
   font-weight: bold;
 }
 .comment-button {
-  color: #69886e;
+  color: #69886e !important;
   padding: 0.5em 1em;
   border-radius: 4px;
   position: absolute;
@@ -257,7 +266,7 @@ ol {
 }
 .comment-button:hover {
   background: #69886e;
-  color: #fff;
+  color: #fff !important;
 }
 .downvote-button,
 .upvote-button,
@@ -276,4 +285,36 @@ ol {
 }
 .post-comment .post-comment {
   background: #eee;
+}
+.article-container{
+  position:absolute;
+}
+
+.post-metrics{
+  display: flex;
+  gap: 1em;
+  align-items: center;
+}
+
+@media (max-width: 480px) {
+  header{
+    justify-content: center;
+  }
+  .post-content {
+    flex-direction: column;
+  }
+  .post-title {
+    align-self: start;
+  }
+  .post-meta{
+    align-self: end;
+  }
+  .post-metrics{
+    flex-direction: column;
+  }
+}
+
+svg, img {
+  max-width: 100%;
+  height: auto;
 }

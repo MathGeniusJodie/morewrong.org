@@ -123,7 +123,7 @@ function generateArticleHTML(files) {
     const bodyHtml = marked(body);
 
     // Generate the article ID
-    const articleId = file.replace(/\.md$/, "");
+    const articleId = file.replace(/\.md$/, "").replace(/.*\//, "");
 
     // Create the article HTML
     let articleHtml = `
@@ -211,7 +211,7 @@ function generatePostListHTML(files) {
 
   objList.forEach((attributes, index) => {
     // Generate the article ID
-    const articleId = attributes.file.replace(/\.md$/, "");
+    const articleId = attributes.file.replace(/\.md$/, "").replace(/.*\//, "");
 
     // Create the post list HTML
     let postListHtml = `

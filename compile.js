@@ -237,23 +237,22 @@ function generatePostListHTML(files) {
 
     // Create the post list HTML
     let postListHtml = `
-        <div class="post-item">
-            <div class="post-score">${Math.floor(Math.random() * 100)}</div>
-            <div class="post-content">
-              <a href="#${articleId}" class="post-title"
-                >${
-                  attributes.pin
-                    ? `<span class="post-title-star">★</span> `
-                    : ""
-                }${attributes.title}</a
-              >
-              <span class="post-author">${attributes.author}</span>
-            </div>
-            <div class="post-metrics">
-              <div class="post-time">${shortHumanize(attributes.date)}</div>
-              <div class="post-comments">${attributes.commentsCount}</div>
-            </div>
+        <a href="#${articleId}" class="post-item">
+          <div class="post-score">${Math.floor(Math.random() * 100)}</div>
+          <div class="post-content">
+            <div class="post-title"
+              >${
+                attributes.pin
+                  ? `<span class="post-title-star">★</span> `
+                  : ""
+              }${attributes.title}</div>
+            <span class="post-author">${attributes.author}</span>
           </div>
+          <div class="post-metrics">
+            <div class="post-time">${shortHumanize(attributes.date)}</div>
+            <div class="post-comments">${attributes.commentsCount}</div>
+          </div>
+        </a>
         `;
     if (attributes.date === "NA") {
       postList2.push(postListHtml);

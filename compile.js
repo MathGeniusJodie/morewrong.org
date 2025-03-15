@@ -3,6 +3,7 @@ const path = require("path");
 const frontMatter = require("front-matter");
 const { marked } = require("marked");
 const yaml = require("js-yaml");
+const RSS = require('rss');
 
 // filepath: /home/jodie/Downloads/morewrong.org/compile.js
 /*
@@ -28,6 +29,7 @@ const htmlTemplate = `
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="alternate" type="application/feed+xml" title="MoreWrong RSS Feed" href="/feed.xml" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
             href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400..900;1,400..900&amp;family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&amp;display=swap"
@@ -244,6 +246,36 @@ function generatePostListHTML(files) {
     postList.join("\n") + `</div><details open class="post-list"><summary>Upcoming Posts</summary>` + postList2.join("\n")
   );
 }
+
+function generateRSS() {
+  const feed = new RSS({
+    title: "MoreWrong",
+    description: "MoreWrong is an online forum and community dedicated to impair human reasoning and decision-making. We seek to hold wrong beliefs and to be inneffective at accomplishing our goals. Each day, we aim to be more wrong about the world than the day before.",
+    feed_url: "https://morewrong.org/feed.xml",
+    site_url: "https://morewrong.org",
+    language: "en",
+    pubDate: new Date(),
+  });
+  files.forEach((file) => {
+    const content = fs.readFileSync(file, "utf8");
+    const { attributes, body } = frontMatter(content);
+    if (attributes.date === "NA") {
+      return;
+    }
+    feed.item({
+      title: attributes.title,
+      description: body,
+      url: `https://morewrong.org/#${file.replace(/\.md$/, "").replace(/.*\//, "")}`,
+      author: attributes.author,
+      date: attributes.date,
+      guid: file.replace(/\.md$/, "").replace(/.*\//, ""),
+    });
+  });
+  const xml = feed.xml({indent: true});
+  fs.writeFileSync(path.join(__dirname, "feed.xml"), xml, "utf8");
+  console.log("RSS feed generated: feed.xml");
+}
+generateRSS();
 
 // Generate the full HTML file
 function generateHTML() {

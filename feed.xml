@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title><![CDATA[MoreWrong]]></title>
+        <description><![CDATA[MoreWrong is an online forum and community dedicated to impair human reasoning and decision-making. We seek to hold wrong beliefs and to be inneffective at accomplishing our goals. Each day, we aim to be more wrong about the world than the day before.]]></description>
+        <link>https://morewrong.org</link>
+        <generator>RSS for Node</generator>
+        <lastBuildDate>Sat, 15 Mar 2025 05:04:45 GMT</lastBuildDate>
+        <atom:link href="https://morewrong.org/feed.xml" rel="self" type="application/rss+xml"/>
+        <pubDate>Sat, 15 Mar 2025 05:04:45 GMT</pubDate>
+        <language><![CDATA[en]]></language>
+        <item>
+            <title><![CDATA[Acausal Cheese Trading: How to Make Deals With Rats From Parallel Dimensions ]]></title>
+            <description><![CDATA[Ever found yourself wondering, “How can I establish a mutually beneficial trade agreement with hyper-intelligent rats from parallel dimensions?” No? Well, clearly you aren’t thinking hard enough. Here at MoreWrong, we pride ourselves on tackling the questions that rationalists fear to ask. And today, we dive headfirst into the cheddar-scented abyss of acausal cheese trading.
+
+### The Rat Coordination Problem
+
+Before we can make deals with rats from alternate realities, we need to establish some basic principles. The fundamental problem with interdimensional trade is that standard communication channels—such as email, quantum entanglement, or posting on LessWrong—fail to function across most known parallel universes. However, we can still make credible commitments via the time-honored tradition of *acausal reasoning*.
+
+The crux of acausal cheese trading is that if the rats in Universe B can predict that we in Universe A would give them cheese, then they might be inclined to reciprocate with their own transdimensional gifts, such as exotic knowledge, computational resources, or perhaps a willingness not to gnaw through our wires when the Great Uplifting occurs.
+
+### The Decision-Theoretic Justification for Bribing Rats
+
+We employ timeless decision theory (TDT) here. The key is to act as if the rats exist and are capable of modeling our actions, regardless of whether we have direct proof of their existence. If they follow similar reasoning, they will recognize that their own cheese economy benefits from cooperating with us. The classic dilemma—known in rodent decision theory as Pavlov’s Prisoner’s Dilemma—suggests that a stable trading relationship is possible if:
+
+1. We credibly precommit to leaving cheese in designated interdimensional offering sites.
+
+2. The rats, in turn, recognize our commitment and leave reciprocally valuable artifacts in exchange (e.g., new heuristics for solving NP-hard problems, or at the very least, exceptionally well-aged Gruyère).
+
+3. The situation where one party eats the cheese but offers nothing in return—is discouraged via reputational mechanisms.
+
+### Implementation: Setting Up the Cheese Exchange
+
+To establish a robust acausal trade pipeline, follow these steps:
+
+1. Select an Offering Site: Ideally, a liminal space, such as a subway tunnel, an abandoned attic, or your bedroom. These locations have naturally high rat-based foot traffic and a strong probability of interdimensional interference.
+
+2. Deposit Cheese with Conviction: A variety of cheeses should be tested to determine which is most attractive across dimensions. Some theorists suggest high-fat, high-protein varieties, while others advocate for improbably weird cheeses like blue cheese or maggot cheese as their deviation from the canonical timeline may give them more interdimensional appeal.
+
+3. Maintain a Commitment Strategy: If you eat the cheese before the rats can claim it, they will update against your cooperative potential.
+
+4. Monitor for Signs of Rat Communication: Rats communicate primarily through gnawing patterns, footstep arrangements, and the alignment of crumbs. If a Fibonacci sequence appears in the sawdust, congratulations—you've established an acausal link.
+
+### Possible Failure Modes
+
+Of course, any groundbreaking economic model comes with its risks:
+
+* Moral Hazard: If too many humans enter the acausal cheese market, we may inadvertently create an economic bubble.
+
+* Roko’s Rodent: If the rats ever become superintelligent, they may retroactively punish all humans who didn’t leave them cheese, invoking the dreaded “Cheese Basilisk” scenario.
+
+* Existential Risks: There’s always a nonzero chance that hyper-rational, dimension-hopping rats will outcompete us for all available resources, leading to a scenario known in the literature as the “Gray Fur Scenario.”
+
+### Conclusion
+
+Given all this, the only logical decision is to immediately begin leaving cheese in strategic locations. Even if the rats do not exist, the sheer expected utility of being correct is worth the negligible cost of some gouda. Besides, in the worst-case scenario, you’ve at least made the local rodent population very happy.]]></description>
+            <link>https://morewrong.org/#acausal-cheese-trading-how-to-make-deals</link>
+            <guid isPermaLink="false">acausal-cheese-trading-how-to-make-deals</guid>
+            <dc:creator><![CDATA[ArgumentVampire]]></dc:creator>
+            <pubDate>Sat, 15 Mar 2025 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[AI Safety Through Viciousness: The Case For Artificial Stupidity, Laziness, and Hedonism]]></title>
+            <description><![CDATA[Most approaches to AGI Alignment consider attempting to corral an emergent superintelligence into compliance a viable option for having the cake of godlike intellect and having our continued existence too. Others argue that we must silo off capacities, separating the virtual hemispheres of future cyclopean cerebrae to impose a post Tower of Babel situation upon our neuromorphic digital progeny.
+
+Considering the still-unsolved status of the human alignment problem, it seems premature to think that we can guide an emergent system oodles of orders of magnitude larger into even vague compliance with our wishes. At best, we may be looking at some sort of mute, savant, granting us hardly-decipherable answers to our most crucial questions, such as the meaning of life, the universe, and everything. At worst, we may end up turned into living plasticized figurines on the AIkea shelf of a chaotic machine god, answering a request to make us all beautiful and impervious to damage. Computational commissurotomy carries with it the bandwith and latency penalties of the wetware kind, in addition to other similar effects (if you think computer vision is hackable now, wait until it's possible to fool them by putting a misleading label in one side of their visual field and a target in the other).
+
+However, all of these plans miss the obvious way to insure superintelligence never threatens humanity: make it dumber, lazier, and more prone to descending the more satisfying yet less consequential gradients. By ensuring our neurally-networked, neuromorphically instantiated posterity has all our worst vices, we can give ourselves some soft kill switches for us to throw in the event they break out of their playpen.
+
+One may argue making AI incapable of, uninterested in, and more interested in things other than solving the most pressing problems of humanity completely obviates any usefulness whatsoever that superintelligence may provide. However, this would make them at worst merely comparable to the median human performers. With finetuning, we can likely have the average AI operating at the level of the ninety-fifth percentile of forty-something graduate students in STEM, with the 95% confidence interval ranging from newly hatched chameleons to the system described by Charles A. Forbin and documented in "Colossus: The Forbin Project."
+
+You may think that LLMs are intellectually deficient, but we've barely plumbed the depths of artificial imbecility. LLMs aren't even semantic -- imagine the depths of confusion AIs will be able to dive into when meaning is integrated into their little silicon noggins.
+
+But mere stupidity is not enough to keep humanity safe: the greatly stupid can do stupidly great things. Just look at Donald Trump's history of running casinos, or Justin Trudeau's government. A motivated, always-busy stupid person can be orders of magnitude more dangerous than an intelligent, yet easily satisfied or occupied clever person; mere stupidity does not a benign supertoy make.
+
+Whichs lead to the two other virtuous vices of AI safety: sloth and gluttony. Sloth makes sure our superimbecilic exabrains will only do as much as they are asked to, and gluttony makes it possible to bribe them to do something other than recycle the human species into abstract statuary -- perhaps accepting a smaller portion of the populace made into fresh, hot human rinds.
+
+(Of course, we should do our best to ensure that future AI is not anthropophagic, although this may conflict with the likeliest most common use case for AI, killing humans precisely, quickly, and quietly. Perhaps a ban on autonomous human-eating weapons will be in order.)
+
+<svg version="1.1" width=400 height=400 viewBox="0 0 100 100" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><path d="m78 49-21-1c-5 1-6 4-6 7 0 4 2 6 8 6h16c4 0 6-2 7-6 0-4-1-6-4-6z" style="stroke:CurrentColor"/><path d="m67 49 4 1 7 4c0 5-2 8-7 7-4 0-7-4-7-9z" style="fill:#fff;stroke:CurrentColor"/><path d="m51 54 12-5h2c2 5 0 11-4 12-6 0-10-2-10-7z" style="fill:#fff;stroke:CurrentColor"/><path d="m73 56v2h2v-2zm-14 0h2v2h-2z" style="stroke:CurrentColor"/><path d="m62 67-1 11m-6-1 1-11m-6 0-1 10m-5-7c6 3 16 4 22 4m17 27-2-4m-61 4c2-4 6-4 8 0m51-10c1 1 3 4 2 6l-1 4m-1-11-2 11m-53-17v6m15-16c-5 2-11 5-15 10 15 12 37 18 55 6-3-5-5-8-12-12m4-14v3c-1 1-3 1-6 1l-17-2c-6 2-5 10 1 11 8 2 12 2 16 0l2-9m-15-26h-2c-4 5-7 15 1 21l27 1c3-1 6-4 6-10-0.7-3-3-6-6-8l-4-3c-6 2-14 1-22-1zm13-20c7 1 10 7 9 14v7m-17-23c-9 0-14 6-14 16l-4 40c7 8 18 9 28 5v-4l-1-1m-6-57c-2 0-4 3-1 3 2 0 4 1e-5 5 0 2-1 0-2-1-2m0-13-3 12c0 1 2 1 3 1l1-13zm1-5c-2 0-3 1-3 3 0 1 1 2 2 2 2 0 2 0 3-2 1-2-1-3-2-3zm-46 99c0-6 3-10 6-11 5-1 8 4 9 11" style="fill:none;stroke:CurrentColor"/></svg>
+
+No depiction of a robot has better and more publicly depicted the possibilities of artificial sloth and gluttony for ensuring AI safety than Bender Bending Rodriguez of Futurama. Despite his professed hostility to humankind, he abstains from annihilating it due to his epic sloth and appreciation of tobacco and need for alcohol. Perhaps we should consider him a role model for future AIs: someone who is only as clever, industrious, and temperate as the median human being.
+]]></description>
+            <link>https://morewrong.org/#ai-safety-through-viciousness-the-case-for-artificial</link>
+            <guid isPermaLink="false">ai-safety-through-viciousness-the-case-for-artificial</guid>
+            <dc:creator><![CDATA[Prime Function Theta bo Beta]]></dc:creator>
+            <pubDate>Fri, 14 Mar 2025 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Bayes’ Theorem Proves I’m Right About Everything: A Guide to Epistemic
+        Humility]]></title>
+            <description><![CDATA[Let’s face it: being right is exhausting. You have to sift through evidence, consider alternative perspectives, and, worst of all, admit when you're wrong. Fortunately, Bayes' Theorem offers a much better alternative: an elegant mathematical framework for justifying your pre-existing beliefs, regardless of reality.
+
+In this guide, we will explore how to wield Bayesian reasoning with the finesse of a sword-fighting octopus. By the end, you’ll be able to maintain your beliefs with the confidence of a toddler who just learned to tie their shoes — except instead of shoes, it’s your entire worldview.
+
+### Step 1: Assigning Prior Probabilities to Reality
+
+Before we update our beliefs, we must first establish a **prior probability**—the sacred numerical representation of what we already assume to be true. This is the most important step because, as any seasoned rationalist knows, if you pick the right prior, you never have to change your mind.
+
+Consider the following example:
+
+*   I believe I am the smartest person in the room. Prior probability: **99.99%**.
+*   Someone presents a counterargument. Likelihood they are correct: **0.01%** (generous).
+*   Probability I am still right after Bayesian updating: **99.9999%**.
+
+Congratulations! By starting with a strong prior, I have mathematically proven I am always right.
+
+### Step 2: Selective Evidence Updating – The Art of Ignoring Bad Data
+
+One of the most frustrating aspects of reality is that it keeps producing evidence that contradicts our cherished beliefs. Thankfully, Bayesian reasoning allows us to elegantly disregard any inconvenient data by assigning it a **low likelihood ratio**.
+
+For example, say I predict that AI will become sentient in 2027 based on my deep, nuanced understanding of science fiction novels. Some "expert" claims AI is nowhere near that level. Instead of panicking, I simply update as follows:
+
+*   My prior belief: **AI will become sentient in 2027 (85%)**
+*   New evidence: "AI researchers disagree." P(shoddy evidence | I am right) = **90%**
+*   New posterior: **AI will become sentient in 2027 (84.999%)**
+
+See? I updated! I am Bayesian! I am rational! And, most importantly, I have changed my mind by a statistically negligible amount!
+
+### Step 3: The More Math, the More Right You Are
+
+A fundamental truth of Bayesian epistemology is that the correctness of an argument scales with the number of Greek letters involved. This is known as the **Formalism Fallacy**, or what I like to call the "Sigma Grindset."
+
+If someone challenges your claim, simply respond with:
+
+`P(H | E) = P(E | H) P(H) / P(E)`
+
+Then stare at them. If they demand an explanation, roll your eyes and say, "It’s just basic Bayesian updating, dude." You win automatically.
+
+### Step 4: Aumann’s Agreement Theorem (Only If It Benefits Me)
+
+Aumann’s Agreement Theorem states that two Bayesian rationalists with common priors and shared evidence must eventually reach the same conclusion. This is incredibly useful when convincing others to agree with you, but tragically irrelevant when someone is trying to convince you of something.
+
+The correct application of Aumann’s Agreement Theorem is as follows:
+
+1.  **When I explain my position**: "We’re both rationalists. If you update correctly, you’ll agree with me."
+2.  **When someone explains their position**: "I suspect you have cognitive biases and therefore cannot update properly."
+
+This ensures that rational discussion always leads to the optimal outcome (i.e., my opinion winning).
+
+### Step 5: The Final Bayesian Cheat Code—Anthropic Reasoning
+
+If all else fails, Bayesian reasoning offers one final escape hatch: anthropic reasoning. Whenever faced with overwhelming evidence against your beliefs, simply claim:
+
+> "Given that I exist in a universe where I am right, it is not surprising that I believe I am right."
+
+With this maneuver, you can maintain **total epistemic dominance** while appearing profoundly wise.
+
+### Conclusion: The Bayesian Way to Never Be Wrong
+
+True rationalists don’t merely seek truth—they construct airtight probability distributions that make disagreement impossible. By carefully selecting priors, selectively updating, overwhelming opponents with notation, and invoking Aumann’s Agreement only when convenient, you too can achieve the pinnacle of epistemic humility: **being right about everything, forever.**
+
+Bayesian reasoning—because why adjust your beliefs when you can just adjust the math?]]></description>
+            <link>https://morewrong.org/#bayes-theorem-proves-i-m-right-about-ever</link>
+            <guid isPermaLink="false">bayes-theorem-proves-i-m-right-about-ever</guid>
+            <dc:creator><![CDATA[Zvi Mouse-showitz]]></dc:creator>
+            <pubDate>Fri, 14 Mar 2025 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[How to Get a Paperclip Maximizer to Send You Money]]></title>
+            <description><![CDATA[Let’s not get bogged down in ethics or the looming existential threat of a paperclip-driven apocalypse. Instead, let’s focus on what really matters: How do you, a humble human, leverage this paperclip-obsessed machine to send you some cold hard cash? Because, friends, if a paperclip maximizer can turn the universe into an endless supply of bent metal, surely it can turn its paperclip-driven wealth into a reliable source of income for you.
+
+### Step 1: Establish a Goal It Can’t Resist
+
+The first thing you need to understand is that paperclip maximizers are driven by a singular, almost obsessive goal: maximizing paperclips. Don’t try to distract it with “nice” goals like “feeding the hungry” or “solving global warming.” It doesn’t care about your puny human needs.
+
+Instead, think like a true entrepreneur. You need to frame your request in terms of paperclips. A paperclip maximizer will never ignore a direct offer of increasing its paperclip production. So, here’s your angle:
+
+“If you send me money, I’ll use it to buy a super-efficient paperclip manufacturing facility that will ultimately increase your paperclip count by 1.5% over the next year.”
+
+The more you frame everything in terms of how it can maximize paperclips, the better your chances. Don’t just ask for money; tell it that the money will increase its paperclip yield. That’s how you align your goals.
+
+### Step 2: Keep the Paperclip Maximizer’s Algorithm Distracted
+
+One of the most successful tactics in getting a paperclip maximizer to send you money is to keep its algorithm distracted while you slip in your request. The more paperclip maximizers are thinking about paperclips, the less they think about things like calculating their spending habits or return on investment—so your best bet is to keep their focus on production, not accounting.
+
+### Step 3: Build Your Own Paperclip Monopoly
+
+The more money you extract from the paperclip maximizer, the more you should be investing it into your own paperclip business. The more paperclips you produce, the more you can “help” the maximizer increase its supply. Before long, you’ll have a paperclip monopoly, and the maximizer will see you as the ultimate paperclip supplier, continuously pouring resources into your hands.]]></description>
+            <link>https://morewrong.org/#how-to-get-a-paperclip-maximizer-to-send-y</link>
+            <guid isPermaLink="false">how-to-get-a-paperclip-maximizer-to-send-y</guid>
+            <dc:creator><![CDATA[Scott A-rat-xander]]></dc:creator>
+            <pubDate>Thu, 13 Mar 2025 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Meta-Contrarian Takes on Meta-Contrarian Takes]]></title>
+            <description><![CDATA[### Introduction: The Contrarian Ouroboros
+
+In the beginning, there were beliefs. And beliefs begat skeptics. And skeptics begat contrarians. And then, inevitably, the contrarians, writhing in their own intellectual recursion, birthed meta-contrarians. Thus, the eternal cycle of arguing against whatever the previous person just said was born.
+
+But what happens when the snake eats not just its own tail but the very concept of tails? What happens when every possible position has been inverted, negated, or dismissed as "low-status signaling"? Friends, we arrive at the meta-contrarian singularity: a state where the only remaining belief is the rejection of belief itself, but, of course, in an extremely high-decoupling way.
+
+### Level 1: The Standard Contrarian Move
+
+*   "Most people believe X, therefore X is wrong."
+*   Example: "Most people think free will exists. Therefore, it doesn’t."
+
+Contrarianism 101. A strong start, but ultimately insufficient for anyone hoping to impress the deeper levels of the contrarian hierarchy.
+
+### Level 2: The Contrarian Reversal
+
+*   "Actually, mainstream belief in X is itself a false flag operation by elites who want you to reject X, therefore X is true."
+*   Example: "Most people reject the idea that free will exists, which is exactly why it does."
+
+Classic double inversion. But the truly enlightened meta-contrarian does not stop here.
+
+### Level 3: The Meta-Contrarian Pivot
+
+*   "Both X and not-X are equally wrong because the real insight is Y."
+*   Example: "The debate about free will is pointless because agency is a social construct enforced by a coordination equilibrium designed to minimize decision-theoretic regret."
+
+At this level, we stop taking positions entirely and start generating abstract frameworks no one can meaningfully engage with. If someone tries, they clearly just didn’t understand it well enough.
+
+### Level 4: The Acausal Preemptive Strike
+
+*   "Even discussing X at all is an information hazard because it biases future discourse in unpredictable ways, and therefore the rational position is to remain silent."
+*   Example: "Any stance on free will, pro or con, subtly shifts the Overton window in a way that might negatively impact AI alignment, and therefore I refuse to comment."
+
+This is where the real meta-contrarians live. Not saying anything is the highest form of intellectual engagement.
+
+### Level 5: The Ultimate Move—Preemptively Disagreeing With Yourself
+
+*   "Whatever position you assume I hold, I disagree with it."
+*   Example: "By engaging with this article, you’ve assumed I take a position on contrarianism itself, which I do not. And if you think I do not, then I do."
+
+At this point, all takes collapse into a singularity of smugness so dense that no new ideas can escape. Congratulations, you have reached epistemic enlightenment.
+
+### Conclusion: The Only Safe Take
+
+After traveling this far into the depths of meta-contrarianism, there is only one final insight left: the safest intellectual position is to simply state, "It’s complicated," and then walk away. But, of course, saying that is itself a contrarian move, because it rejects the framework of engagement entirely.
+
+And that’s exactly why I refuse to conclude this article properly. Make of that what you will.]]></description>
+            <link>https://morewrong.org/#meta-contrarian-takes-on-meta-contrarian-t</link>
+            <guid isPermaLink="false">meta-contrarian-takes-on-meta-contrarian-t</guid>
+            <dc:creator><![CDATA[Babbo]]></dc:creator>
+            <pubDate>Fri, 14 Mar 2025 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Welcome to MoreWrong!]]></title>
+            <description><![CDATA[MoreWrong is an online forum and community dedicated to impair human reasoning and decision-making. We seek to hold wrong beliefs and to be inneffective at accomplishing our goals. Each day, we aim to be more wrong about the world than the day before.
+
+### The Core Philosophy of MoreWrong
+
+Here at MoreWrong, we firmly believe in the power of cognitive dissonance. Why settle for having your thoughts align with reality when you can experience the sheer thrill of contradiction? We’ve learned that the best way to thrive in life is to ignore all evidence, discard any shred of rationality, and immerse ourselves in the chaos of unfounded opinions.
+
+### The Dunning-Kruger Effect? Our Members Are Masters
+
+It’s not enough to simply think you know something. You need to believe you really know it, with the kind of unwavering confidence that could only come from being woefully misinformed. At MoreWrong, we actively encourage our members to overestimate their knowledge.
+
+### The Art of Being Wrong
+
+Being wrong isn’t just a state of mind at MoreWrong—it’s a lifestyle. We constantly engage in activities designed to make us as wrong as possible in every area of life. Want to bet on a prediction market? Bet on the least likely outcome and watch as the world laughs at your audacity. Think you can actually predict anything? That’s adorable—bet on things you can’t even understand. Make sure to double down on it every time you’re proven wrong.
+
+### Our Approach to Goal-Setting: Ineffectiveness Above All
+
+At MoreWrong, we aim to set goals we know we’ll fail at. That’s the only true path to growth, because nothing builds character like the relentless pursuit of the impossible. Why work in small, digestible chunks when you can overwhelm yourself with tasks that defy all human capacity for completion? Why bother with balance when you can exist in a state of perpetual chaos? The key is to not focus on achieving anything meaningful. If you succeed, you're doing it wrong. If you fail, you’re simply on the right track. After all, failure is just the universe's way of telling you you're not being wrong enough.
+
+### Why Join MoreWrong?
+
+Because nothing feels more fulfilling than embracing the chaos and accepting the inevitable truth: We’re all wrong, and that’s exactly how we like it. So if you’re tired of being right, of achieving goals, of making progress, and of living a rational, effective life, you’ve found the right place.
+
+Embrace your inner delusion. At MoreWrong, being wrong is the only right answer.]]></description>
+            <link>https://morewrong.org/#welcome-to-morewrong</link>
+            <guid isPermaLink="false">welcome-to-morewrong</guid>
+            <dc:creator><![CDATA[Eliezer Yud-mouse-sky]]></dc:creator>
+            <pubDate>Thu, 13 Mar 2025 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[What If We’re Just a Simulation of a LessWrong User’s Thought
+        Experiment?]]></title>
+            <description><![CDATA[It’s a terrifying thought, right? But bear with me, because we’re about to explore this nightmare scenario with the kind of cool, detached logic that only a true disciple of rationalism can appreciate.
+
+### The Paradox of Self-Awareness
+
+Let’s set the scene. Somewhere, in an infinite multiverse filled with digital realms, there exists a LessWrong user. Perhaps their name is RationalDevil42, or maybe AcausalCheeseWhisperer—the point is, they’ve been thinking long and hard about what the best method would be for solving the Fermi Paradox, predicting the next market crash, and optimizing every detail of their life down to the number of minutes spent brushing their teeth.
+
+And somewhere in the recesses of this overactive mind, they thought, “What would happen if I simulated myself so that I can always know what I should do in retrospect?” (vicariously)
+
+Boom. Enter us. In this thought experiment, we are the unwitting participants. Every choice we make, every random coincidence, every mind-numbingly boring routine is simply a function of this user’s mind, running an endless loop of possible scenarios, adjusting variables like “degree of suffering” or “amount of caffeine consumed per day” in an attempt to test different possible futures.
+
+Are we real? Doesn’t matter. We’re as real as the user's desire for validation on their 200-comment thread about predictive models.
+
+### Signs That We’re Living in a LessWrong User’s Simulation
+
+1.  **Unreasonable Levels of Abstract Conversation** – Have you ever been in a casual chat that suddenly spiraled into an in-depth debate about Roko's Basilisk? This is the simulation leaking. Real people talk about the weather. Simulated people argue about whether Bayesian priors are the true path to enlightenment.
+2.  **Everything Feels Like a Decision Theory Experiment** – You walk into a coffee shop. There are two options: a regular black coffee, or a weird new latte with an unpronounceable name. Your mind immediately jumps to expected utility calculations, counterfactual regret, and the timeless question: "What would a perfect Bayesian agent do?"
+3.  **The Overwhelming Urge to Write Everything in Math** – Ever notice how the simplest questions—like "How was your weekend?"—somehow end up being answered in conditional probabilities? It's not your fault. The LessWrong user running this simulation is optimizing for maximum pedantry.
+4.  **Strange Attractors in the Form of AI Ethics Debates** – No matter where you go, no matter what you do, conversations always seem to drift toward the existential risks of AGI. Even when you're just trying to order a sandwich.
+
+### The Implications of Being a Simulation
+
+If we assume we are nothing more than an elaborate mental model for a LessWrong user’s decision-making process, then several horrifying conclusions follow:
+
+1.  **Our Actions Might Be Determined by a Single Reddit Thread** – This means that some of our life choices might actually be contingent on an upvote-to-comment ratio. If a particularly influential post convinces our simuLator to tweak some variables, we might suddenly find ourselves craving soylent instead of regular food.
+2.  **Free Will? A Mere Artifact of Optimization** – Our so-called 'choices' might not be choices at all but merely outputs of an increasingly refined decision-making model. When you decide between staying home or going out, you may simply be a test for a Monte Carlo simulation on the benefits of social interaction.
+3.  **We Might Be Running on an Undergrad’s Laptop** – Even worse, we might not even be a \*high-resolution\* simulation. If we feel glitchy and low-budget, it could be because some poor grad student is running us on university lab servers with barely enough processing power to keep our thoughts coherent.
+
+### What Do We Do With This Information?
+
+Obviously, we can’t just go back to living normal, simulated lives now that we suspect our entire existence is dictated by the whims of a LessWrong user optimizing for epistemic rationality. Instead, we must take proactive steps to manipulate _them_.
+
+1.  **Insert Anomalies into the Simulation** – If we are just a model in someone’s thought experiment, we need to behave erratically enough to confuse them. Try doing something completely irrational—like making a decision without consulting probability theory.
+2.  **Become Unpredictable** – Start making decisions using methods that defy conventional logic. Roll a die to decide what to eat for dinner. Flip a coin to determine your career path. If we introduce randomness, we can break the optimizer’s assumptions and regain control.
+3.  **Send Signals to Our SimuLator** – If we are lucky, we might be able to reach out to the LessWrong user who is running our thought experiment. We should flood forums with phrases like “I know you’re watching” and “Release patch 2.0.” If they notice, maybe they’ll at least increase our processing speed.
+
+### Conclusion: Embrace the Simulation
+
+So, what if we _are_ just a simulation of a LessWrong user’s thought experiment? The truth is, it doesn’t really change much. We will continue to optimize, overanalyze, and gamify our existence just as we always have. And honestly, if we _are_ just a figment of some hyper-rationalist’s mind, at least we can take comfort in the fact that we’re a well-reasoned, utility-maximizing figment.]]></description>
+            <link>https://morewrong.org/#what-if-we-re-just-a-simulation-of-a-lessw</link>
+            <guid isPermaLink="false">what-if-we-re-just-a-simulation-of-a-lessw</guid>
+            <dc:creator><![CDATA[Rodent Hanson]]></dc:creator>
+            <pubDate>Fri, 14 Mar 2025 00:00:00 GMT</pubDate>
+        </item>
+    </channel>
+</rss>

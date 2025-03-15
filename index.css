@@ -1,12 +1,8 @@
 /* Reset and base styles */
 * {
   font-family: inherit;
-}
-html {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  height: 100%;
+  contain: layout style paint inline-size;
+  font-size-adjust: ex-height 0.5;
 }
 body {
   background-color: #f8f4ee;
@@ -16,12 +12,16 @@ body {
   background-size: max(calc(50vw - 400px), 700px) max(calc(50vw - 400px), 700px);
   background-repeat: no-repeat;
   color: rgba(0, 0, 0, 0.87);
-  line-height: 1.5;
-  font-family: Lato, sans-serif;
-  min-height: 100%;
+  line-height: 22px;
+  font-family: Lato, system-ui, sans-serif;
+  flex-grow: 1;
+}
+
+html, body{
   display: flex;
   flex-direction: column;
   align-items: stretch;
+  min-height: 100%;
 }
 
 a{
@@ -46,7 +46,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.75rem 1.5rem;
+  padding: 0 1.5rem;
   height: 64px;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05), 0 1px 1px rgba(0, 0, 0, 0.05);
   background-color: rgba(255, 255, 255, 0.65);
@@ -58,6 +58,7 @@ header {
 .header-left {
   display: flex;
   align-items: center;
+  flex-grow: 1;
 }
 
 .menu-button {
@@ -69,23 +70,24 @@ header {
 }
 
 .logo {
-  font-size: 27px;
+  font-size: 26px;
   text-decoration: none;
   color: inherit !important;
-  font-family: "Crimson Pro", serif;
+  font-family: "Crimson Pro", Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif;
+  flex-grow: 1;
 }
 
 /* Main content layout */
 .main-container {
   display: flex;
-  max-width: 765px;
+  width: 765px;
+  max-width: 100%;
   margin: 82px auto;
 }
 
 /* Content styles */
 .content {
   flex: 1;
-  overflow-y: auto;
   background-color: white;
 }
 
@@ -123,10 +125,10 @@ details:hover, details:focus-within {
 }
 
 .post-title {
-  font-size: 18px;
   text-decoration: none;
-  font-family: "Crimson Pro", serif;
+  font-family: "Crimson Pro", Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif;
   color: inherit;
+  contain: layout style paint;
 }
 .post-title:visited {
   color: rgba(0, 0, 0, 0.6);
@@ -140,30 +142,28 @@ details:hover, details:focus-within {
   margin-right: 0.5rem;
 }
 
-.post-meta {
+.post-author {
   display: flex;
   align-items: center;
-  font-size: 0.85rem;
-  color: rgba(0, 0, 0, 0.6);
-  margin-top: 0.25rem;
   text-align: right;
-}
-
-.post-author {
-  margin-right: 0.5rem;
+  font-size: 0.9em;
+  color: rgba(0, 0, 0, 0.6);
+  text-wrap-style: balance;
+  contain: layout style paint;
 }
 
 .post-comments {
   width: 3ch;
   box-sizing: content-box;
   text-align: center;
-  font-size: 0.85rem;
+  font-size: 0.9em;
   padding: 0.25rem 0.5rem;
   background-color: rgba(0, 0, 0, 0.6);
   border-radius: 4px;
   color: #fff;
   border-bottom-right-radius: 0;
   position: relative;
+  contain: layout;
 }
 .post-comments::after {
   content: "";
@@ -181,25 +181,27 @@ details:hover, details:focus-within {
 .post-time {
   min-width: 2ch;
   text-align: center;
-  font-size: 0.85rem;
+  font-size: 0.9em;
   color: rgba(0, 0, 0, 0.6);
 }
 
 h1 {
-  font-size: 3.75rem;
-  font-size: min(10vw, 3.75rem);
-  line-height: 1em;
-  font-weight: 300;
+  font-size: 58px;
+  font-size: min(10vw, 58px);
+  line-height: 60px;
+  font-weight: 400;
+  text-wrap-style: balance;
+  contain: layout style inline-size;
 }
 .article-container {
-  font-family: "Crimson Pro", serif;
+  font-family: "Crimson Pro", Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif;
   background: white;
   padding: 82px max(calc(50vw - 400px), 1ch);
   display: none;
   flex-grow: 1;
 }
 .article-meta {
-  font-family: Lato, sans-serif;
+  font-family: Lato, system-ui, sans-serif;
 }
 .article-container:target {
   display: block !important;
@@ -215,7 +217,7 @@ h1 {
 }
 .post-title small {
   opacity: 0.5;
-  font-family: Lato, sans-serif;
+  font-family: Lato, system-ui, sans-serif;
   font-size: 0.8rem;
 }
 .add-post {
@@ -240,7 +242,7 @@ ol {
   font-weight: normal;
 }
 .post-comments-box {
-  font-family: Lato, sans-serif;
+  font-family: Lato, system-ui, sans-serif;
   margin-bottom: 17px;
   margin-top: 4lh;
 }
@@ -252,7 +254,7 @@ ol {
   margin: 17px 0;
   padding-bottom: 0;
 }
-.post-comment .post-author {
+.comment-author {
   font-weight: bold;
 }
 .comment-button {
@@ -263,11 +265,13 @@ ol {
   right: 12px;
   bottom: 12px;
   text-decoration: none;
+  contain: layout style paint;
 }
 .comment-button:hover {
   background: #69886e;
   color: #fff !important;
 }
+/*
 .downvote-button,
 .upvote-button,
 .minus-button,
@@ -276,24 +280,24 @@ ol {
   border: none;
   cursor: pointer;
   font-weight: bold;
-  font-family: sans-serif;
+  font-family: system-ui, sans-serif;
   opacity: 0.5;
+  width:2ch;
+  text-align: center;
 }
 .comment-button-spacer {
   width: 1ch;
   display: inline-block;
-}
+}*/
 .post-comment .post-comment {
   background: #eee;
-}
-.article-container{
-  position:absolute;
 }
 
 .post-metrics{
   display: flex;
   gap: 1em;
   align-items: center;
+  contain: layout;
 }
 
 @media (max-width: 480px) {
@@ -317,4 +321,8 @@ ol {
 svg, img {
   max-width: 100%;
   height: auto;
+}
+
+li, h3 {
+  contain: layout style inline-size;
 }

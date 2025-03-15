@@ -188,20 +188,7 @@ function renderComments(comments) {
   let html = "";
   comments.forEach((comment) => {
     html += `<div class="post-comment">
-            <span class="post-author">${comment.author || "Anonymous"}</span>`;
-
-    if (comment.karma !== undefined) {
-      html += `
-            <button class="downvote-button">&#9660;</button>
-            <span class="comment-score">${comment.karma}</span>
-            <button class="upvote-button">&#9650;</button>
-            <span class="comment-button-spacer"></span>
-            <button class="minus-button">-</button>
-            <span class="comment-score-2">${comment.aggreement || "0"}</span>
-            <button class="plus-button">+</button>`;
-    }
-
-    html += `
+            <span class="comment-author">${comment.author || "Anonymous"}</span>
             <p>${comment.content || ""}</p>`;
 
     if (comment.replies && comment.replies.length > 0) {
@@ -248,8 +235,8 @@ function generateArticleHTML(files) {
             ${bodyHtml}
             <div class="post-comments-box">
                 <div class="post-comment">
-                    <span class="post-author">New Comment</span>
-                    <p>Text goes here! Pull request to add a comment!</p>
+                    <span class="comment-author">New Comment</span>
+                    <p>Pull request to add a comment!</p>
                     <a
             href="https://github.com/MathGeniusJodie/morewrong.org"
             class="comment-button"
@@ -335,9 +322,7 @@ function generatePostListHTML(files) {
                     : ""
                 }${attributes.title}</a
               >
-              <div class="post-meta">
-                <span class="post-author">${attributes.author}</span>
-              </div>
+              <span class="post-author">${attributes.author}</span>
             </div>
             <div class="post-metrics">
               <div class="post-time">${shortHumanize(attributes.date)}</div>

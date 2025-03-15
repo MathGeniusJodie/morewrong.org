@@ -40,9 +40,7 @@ The crux of acausal cheese trading is that if the rats in Universe B can predict
 We employ timeless decision theory (TDT) here. The key is to act as if the rats exist and are capable of modeling our actions, regardless of whether we have direct proof of their existence. If they follow similar reasoning, they will recognize that their own cheese economy benefits from cooperating with us. The classic dilemma—known in rodent decision theory as Pavlov’s Prisoner’s Dilemma—suggests that a stable trading relationship is possible if:
 
 1. We credibly precommit to leaving cheese in designated interdimensional offering sites.
-
 2. The rats, in turn, recognize our commitment and leave reciprocally valuable artifacts in exchange (e.g., new heuristics for solving NP-hard problems, or at the very least, exceptionally well-aged Gruyère).
-
 3. The situation where one party eats the cheese but offers nothing in return—is discouraged via reputational mechanisms.
 
 ### Implementation: Setting Up the Cheese Exchange
@@ -50,11 +48,8 @@ We employ timeless decision theory (TDT) here. The key is to act as if the rats 
 To establish a robust acausal trade pipeline, follow these steps:
 
 1. Select an Offering Site: Ideally, a liminal space, such as a subway tunnel, an abandoned attic, or your bedroom. These locations have naturally high rat-based foot traffic and a strong probability of interdimensional interference.
-
 2. Deposit Cheese with Conviction: A variety of cheeses should be tested to determine which is most attractive across dimensions. Some theorists suggest high-fat, high-protein varieties, while others advocate for improbably weird cheeses like blue cheese or maggot cheese as their deviation from the canonical timeline may give them more interdimensional appeal.
-
 3. Maintain a Commitment Strategy: If you eat the cheese before the rats can claim it, they will update against your cooperative potential.
-
 4. Monitor for Signs of Rat Communication: Rats communicate primarily through gnawing patterns, footstep arrangements, and the alignment of crumbs. If a Fibonacci sequence appears in the sawdust, congratulations—you've established an acausal link.
 
 ### Possible Failure Modes
@@ -62,9 +57,7 @@ To establish a robust acausal trade pipeline, follow these steps:
 Of course, any groundbreaking economic model comes with its risks:
 
 * Moral Hazard: If too many humans enter the acausal cheese market, we may inadvertently create an economic bubble.
-
 * Roko’s Rodent: If the rats ever become superintelligent, they may retroactively punish all humans who didn’t leave them cheese, invoking the dreaded “Cheese Basilisk” scenario.
-
 * Existential Risks: There’s always a nonzero chance that hyper-rational, dimension-hopping rats will outcompete us for all available resources, leading to a scenario known in the literature as the “Gray Fur Scenario.”
 
 ### Conclusion

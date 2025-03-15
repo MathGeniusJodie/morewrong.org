@@ -5,6 +5,29 @@ const { marked } = require("marked");
 const yaml = require("js-yaml");
 const RSS = require('rss');
 
+
+
+
+const posthtmlPlugins = [
+	require("htmlnano")({
+		collapseWhitespace: "aggressive",
+		minifySvg: false,
+		removeUnusedCss: { tool: "purgeCSS" },
+	}),
+	require("posthtml-minify-classnames")({ genNameId: false }),
+];
+
+
+const posthtmlSettings = {};
+
+const posthtml = require("posthtml");
+
+const buildHtml = async function (source) {
+	return (await posthtml(posthtmlPlugins).process(source, posthtmlSettings))
+		.html;
+};
+
+
 // filepath: /home/jodie/Downloads/morewrong.org/compile.js
 /*
  * This script reads Markdown files with YAML front matter from the 'output' directory
@@ -22,6 +45,10 @@ const RSS = require('rss');
  *   node compile.js
  */
 
+//get content from index.css synchronously
+const cssContent
+  = fs.readFileSync(path.join(__dirname, "index.css"), "utf8");
+
 // Create the base HTML template
 const htmlTemplate = `
 <!DOCTYPE html>
@@ -36,7 +63,7 @@ const htmlTemplate = `
             rel="stylesheet"
         />
         <title>MoreWrong</title>
-        <link rel="stylesheet" href="index.css" />
+        <style>${cssContent}</style>
     </head>
     <body>
         <!-- Header -->
@@ -278,14 +305,15 @@ function generateRSS() {
 generateRSS();
 
 // Generate the full HTML file
-function generateHTML() {
+async function generateHTML() {
   try {
     const articlesHTML = generateArticleHTML(files);
     const fullHtml = htmlTemplate.replace("{{CONTENT}}", articlesHTML);
     const postListHTML = generatePostListHTML(files);
     const finalHtml = fullHtml.replace("{{POSTLIST}}", postListHTML);
+    const minifiedHtml = await buildHtml(finalHtml);
 
-    fs.writeFileSync(outputFile, finalHtml, "utf8");
+    fs.writeFileSync(outputFile, minifiedHtml, "utf8");
     console.log(`Successfully compiled HTML to: ${outputFile}`);
   } catch (error) {
     console.error("Error generating HTML:", error);

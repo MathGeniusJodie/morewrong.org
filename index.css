@@ -104,7 +104,7 @@ details:hover, details:focus-within {
   width: 40px;
   text-align: center;
   padding-right: 1rem;
-  color: #888;
+  color: rgba(0, 0, 0, 0.35);
 }
 
 .post-content {
@@ -151,7 +151,7 @@ details:hover, details:focus-within {
   text-align: center;
   font-size: 0.85rem;
   padding: 0.25rem 0.5rem;
-  background-color: #aaa;
+  background-color: rgba(0, 0, 0, 0.35);
   border-radius: 4px;
   color: #fff;
   border-bottom-right-radius: 0;
@@ -174,7 +174,7 @@ details:hover, details:focus-within {
   width: 60px;
   text-align: center;
   font-size: 0.85rem;
-  color: #888;
+  color: rgba(0, 0, 0, 0.35);
 }
 
 h1 {

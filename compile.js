@@ -59,6 +59,7 @@ const htmlTemplate = `
         <link rel="alternate" type="application/feed+xml" title="MoreWrong RSS Feed" href="/feed.xml" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <meta name="description" content="MoreWrong is an online forum and community dedicated to impair human reasoning and decision-making. We seek to hold wrong beliefs and to be inneffective at accomplishing our goals. Each day, we aim to be more wrong about the world than the day before." />
         <title>MoreWrong</title>
         <style>${cssContent}</style>
     </head>
@@ -94,6 +95,7 @@ const htmlTemplate = `
         <style>
 /* latin-ext */
 @font-face {
+  font-display: swap;
   font-family: 'Crimson Pro';
   font-style: italic;
   font-weight: 400;
@@ -102,6 +104,7 @@ const htmlTemplate = `
 }
 /* latin */
 @font-face {
+  font-display: swap;
   font-family: 'Crimson Pro';
   font-style: italic;
   font-weight: 400;
@@ -110,6 +113,7 @@ const htmlTemplate = `
 }
 /* latin-ext */
 @font-face {
+  font-display: swap;
   font-family: 'Crimson Pro';
   font-style: normal;
   font-weight: 400;
@@ -118,6 +122,7 @@ const htmlTemplate = `
 }
 /* latin */
 @font-face {
+  font-display: swap;
   font-family: 'Crimson Pro';
   font-style: normal;
   font-weight: 400;
@@ -126,6 +131,7 @@ const htmlTemplate = `
 }
 /* latin-ext */
 @font-face {
+  font-display: swap;
   font-family: 'Lato';
   font-style: normal;
   font-weight: 400;
@@ -134,6 +140,7 @@ const htmlTemplate = `
 }
 /* latin */
 @font-face {
+  font-display: swap;
   font-family: 'Lato';
   font-style: normal;
   font-weight: 400;
@@ -142,6 +149,7 @@ const htmlTemplate = `
 }
 /* latin-ext */
 @font-face {
+  font-display: swap;
   font-family: 'Lato';
   font-style: normal;
   font-weight: 700;
@@ -150,6 +158,7 @@ const htmlTemplate = `
 }
 /* latin */
 @font-face {
+  font-display: swap;
   font-family: 'Lato';
   font-style: normal;
   font-weight: 700;

@@ -185,7 +185,7 @@ h1 {
 .article-container {
   font-family: "Crimson Pro", serif;
   background: white;
-  padding: 82px calc(50vw - 400px);
+  padding: 82px max(calc(50vw - 400px), 1ch);
   display: none;
   flex-grow: 1;
 }

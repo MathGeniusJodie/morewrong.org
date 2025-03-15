@@ -68,7 +68,7 @@ const htmlTemplate = `
         <header>
             <div class="header-left">
                 <!-- <button class="menu-button">☰</button>-->
-                <a href="#" class="logo" onclick="history.pushState({}, '', '')">MOREWRONG</a>
+                <a href="#" class="logo" onclick="history.pushState({}, '', '/')">MOREWRONG</a>
             </div>
             <!--<div class="header-right">
             <div class="search-bar">

@@ -33,7 +33,7 @@ Congratulations! By starting with a strong prior, I have mathematically proven I
 
 One of the most frustrating aspects of reality is that it keeps producing evidence that contradicts our cherished beliefs. Thankfully, Bayesian reasoning allows us to elegantly disregard any inconvenient data by assigning it a **low likelihood ratio**.
 
-For example, say I predict that AI will become sentient in 2027 based on my deep, nuanced understanding of science fiction novels. Some "expert" claims AI is nowhere near that level. Instead of panicking, I simply update as follows:
+For example, say I predict that AI will become sentient in 2027 based on my deep, nuanced understanding of science fiction novels. Some “expert” claims AI is nowhere near that level. Instead of panicking, I simply update as follows:
 
 *   My prior belief: **AI will become sentient in 2027 (85%)**
 *   New evidence: "AI researchers disagree." P(shoddy evidence | I am right) = **90%**
@@ -43,7 +43,7 @@ See? I updated! I am Bayesian! I am rational! And, most importantly, I have chan
 
 ### Step 3: The More Math, the More Right You Are
 
-A fundamental truth of Bayesian epistemology is that the correctness of an argument scales with the number of Greek letters involved. This is known as the **Formalism Fallacy**, or what I like to call the "Sigma Grindset."
+A fundamental truth of Bayesian epistemology is that the correctness of an argument scales with the number of Greek letters involved. This is known as the **Formalism Fallacy**, or what I like to call the “Sigma Grindset.”
 
 If someone challenges your claim, simply respond with:
 
@@ -57,8 +57,8 @@ Aumann’s Agreement Theorem states that two Bayesian rationalists with common p
 
 The correct application of Aumann’s Agreement Theorem is as follows:
 
-1.  **When I explain my position**: "We’re both rationalists. If you update correctly, you’ll agree with me."
-2.  **When someone explains their position**: "I suspect you have cognitive biases and therefore cannot update properly."
+1.  **When I explain my position**: “We’re both rationalists. If you update correctly, you’ll agree with me.”
+2.  **When someone explains their position**: “I suspect you have cognitive biases and therefore cannot update properly.”
 
 This ensures that rational discussion always leads to the optimal outcome (i.e., my opinion winning).
 
@@ -66,7 +66,7 @@ This ensures that rational discussion always leads to the optimal outcome (i.e.,
 
 If all else fails, Bayesian reasoning offers one final escape hatch: anthropic reasoning. Whenever faced with overwhelming evidence against your beliefs, simply claim:
 
-> "Given that I exist in a universe where I am right, it is not surprising that I believe I am right."
+> “Given that I exist in a universe where I am right, it is not surprising that I believe I am right.”
 
 With this maneuver, you can maintain **total epistemic dominance** while appearing profoundly wise.
 

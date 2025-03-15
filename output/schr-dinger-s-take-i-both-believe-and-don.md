@@ -1,7 +1,7 @@
 ---
 title: |-
   Schrödinger’s Take: I Both Believe and Don’t Believe This at the Same Time
-                  (Coming "Soon"...)
+                 
 author: SchrodingersRat
 date: NA
 comments: []

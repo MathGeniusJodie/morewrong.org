@@ -1,7 +1,7 @@
 ---
 title: |-
   A Decision-Theoretic Justification for Being Annoying at
-                  Parties (Coming "Soon"...)
+                  Parties
 author: Trolley Conductor
 date: NA
 comments: []

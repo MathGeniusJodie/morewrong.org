@@ -1,7 +1,7 @@
 ---
 title: |-
   50 Life Hacks That Will Make Eliezer Yudkowsky Weep Blood
-                  (Coming "Soon"...)
+                 
 author: EvilMachineMommy
 date: NA
 comments: []

@@ -241,7 +241,7 @@ function generatePostListHTML(files) {
   });
 
   return (
-    postList.join("\n") + `</div><details class="post-list"><summary>Upcoming Posts</summary>` + postList2.join("\n")
+    postList.join("\n") + `</div><details open class="post-list"><summary>Upcoming Posts</summary>` + postList2.join("\n")
   );
 }
 

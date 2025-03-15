@@ -1,5 +1,5 @@
 ---
-title: AI Safety Through Viciousness:The Case For Artificial Stupidity, Laziness, and Hedonism
+title: 'AI Safety Through Viciousness: The Case For Artificial Stupidity, Laziness, and Hedonism'
 author: Prime Function Theta bo Beta
 date: '2025-03-14'
 comments:

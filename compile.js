@@ -3,30 +3,29 @@ const path = require("path");
 const frontMatter = require("front-matter");
 const { marked } = require("marked");
 const yaml = require("js-yaml");
-const RSS = require('rss');
-
-
-
+const RSS = require("rss");
 
 const posthtmlPlugins = [
-	require("htmlnano")({
-		collapseWhitespace: "aggressive",
-		minifySvg: false,
-		removeUnusedCss: { tool: "purgeCSS" },
-	}),
-	require("posthtml-minify-classnames")({ genNameId: false }),
+  require("htmlnano")({
+    collapseWhitespace: "aggressive",
+    //minifySvg: false,
+    removeUnusedCss: { tool: "purgeCSS" },
+    mergeStyles: true,
+    minifyCss: {
+      safe: false,
+    },
+  }),
+  require("posthtml-minify-classnames")({ genNameId: false }),
 ];
-
 
 const posthtmlSettings = {};
 
 const posthtml = require("posthtml");
 
 const buildHtml = async function (source) {
-	return (await posthtml(posthtmlPlugins).process(source, posthtmlSettings))
-		.html;
+  return (await posthtml(posthtmlPlugins).process(source, posthtmlSettings))
+    .html;
 };
-
 
 // filepath: /home/jodie/Downloads/morewrong.org/compile.js
 /*
@@ -46,8 +45,7 @@ const buildHtml = async function (source) {
  */
 
 //get content from index.css synchronously
-const cssContent
-  = fs.readFileSync(path.join(__dirname, "index.css"), "utf8");
+const cssContent = fs.readFileSync(path.join(__dirname, "index.css"), "utf8");
 
 // Create the base HTML template
 const htmlTemplate = `
@@ -182,14 +180,14 @@ function shortHumanize(date) {
   const ms = new Date(date).getTime();
   const now = Date.now();
   const diff = now - ms;
-  const units = { 
-    y: 365*24*60*60*1000,
-    M: 30*24*60*60*1000,
-    w: 7*24*60*60*1000,
-    d: 24*60*60*1000, 
-    h: 60*60*1000, 
-    m: 60*1000,
-    s: 1000 
+  const units = {
+    y: 365 * 24 * 60 * 60 * 1000,
+    M: 30 * 24 * 60 * 60 * 1000,
+    w: 7 * 24 * 60 * 60 * 1000,
+    d: 24 * 60 * 60 * 1000,
+    h: 60 * 60 * 1000,
+    m: 60 * 1000,
+    s: 1000,
   };
   for (const [unit, value] of Object.entries(units)) {
     if (diff >= value) return Math.round(diff / value) + unit;
@@ -240,9 +238,7 @@ function generatePostListHTML(files) {
           <div class="post-content">
             <div class="post-title"
               >${
-                attributes.pin
-                  ? `<span class="post-title-star">★</span> `
-                  : ""
+                attributes.pin ? `<span class="post-title-star">★</span> ` : ""
               }${attributes.title}</div>
             <span class="post-author">${attributes.author}</span>
           </div>
@@ -260,14 +256,17 @@ function generatePostListHTML(files) {
   });
 
   return (
-    postList.join("\n") + `</div><details open class="post-list"><summary>Upcoming Posts</summary>` + postList2.join("\n")
+    postList.join("\n") +
+    `</div><details open class="post-list"><summary>Upcoming Posts</summary>` +
+    postList2.join("\n")
   );
 }
 
 function generateRSS() {
   const feed = new RSS({
     title: "MoreWrong",
-    description: "MoreWrong is an online forum and community dedicated to impair human reasoning and decision-making. We seek to hold wrong beliefs and to be inneffective at accomplishing our goals. Each day, we aim to be more wrong about the world than the day before.",
+    description:
+      "MoreWrong is an online forum and community dedicated to impair human reasoning and decision-making. We seek to hold wrong beliefs and to be inneffective at accomplishing our goals. Each day, we aim to be more wrong about the world than the day before.",
     feed_url: "https://morewrong.org/feed.xml",
     site_url: "https://morewrong.org",
     language: "en",
@@ -282,13 +281,15 @@ function generateRSS() {
     feed.item({
       title: attributes.title,
       description: body,
-      url: `https://morewrong.org/#${file.replace(/\.md$/, "").replace(/.*\//, "")}`,
+      url: `https://morewrong.org/#${file
+        .replace(/\.md$/, "")
+        .replace(/.*\//, "")}`,
       author: attributes.author,
       date: attributes.date,
       guid: file.replace(/\.md$/, "").replace(/.*\//, ""),
     });
   });
-  const xml = feed.xml({indent: true});
+  const xml = feed.xml({ indent: true });
   fs.writeFileSync(path.join(__dirname, "feed.xml"), xml, "utf8");
   console.log("RSS feed generated: feed.xml");
 }

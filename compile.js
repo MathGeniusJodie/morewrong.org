@@ -57,8 +57,6 @@ const htmlTemplate = `
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="alternate" type="application/feed+xml" title="MoreWrong RSS Feed" href="/feed.xml" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
         <meta name="description" content="MoreWrong is an online forum and community dedicated to impair human reasoning and decision-making. We seek to hold wrong beliefs and to be inneffective at accomplishing our goals. Each day, we aim to be more wrong about the world than the day before." />
         <title>MoreWrong</title>
         <style>${cssContent}</style>

@@ -178,7 +178,7 @@ details:hover, details:focus-within {
 }
 
 .post-time {
-  min-width: 2ch;
+  min-width: 2.5ch;
   text-align: center;
   font-size: 0.9em;
   color: rgba(0, 0, 0, 0.6);

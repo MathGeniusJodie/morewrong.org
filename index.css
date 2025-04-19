@@ -177,6 +177,10 @@ details:hover, details:focus-within {
   right: 0;
 }
 
+ol::marker{
+  font-weight: bold;
+}
+
 .post-time {
   min-width: 2.5ch;
   text-align: center;

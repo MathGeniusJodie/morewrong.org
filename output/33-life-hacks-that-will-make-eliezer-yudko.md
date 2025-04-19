@@ -1,6 +1,6 @@
 ---
 title: |-
-  34 Life Hacks That Will Make Eliezer Yudkowsky Weep Blood
+  33 Life Hacks That Will Make Eliezer Yudkowsky Weep Blood
                  
 author: EvilMachineMommy
 date: 2025-04-19
@@ -22,7 +22,7 @@ comments:
     aggreement: ''
 ---
 
-Here are 34 ontologically feral life hacks guaranteed to make Eliezer Yudkowsky's soul hemmorage.
+Here are 33 ontologically feral life hacks guaranteed to make Eliezer Yudkowsky's soul hemmorage.
 
 1. Rotate your beliefs seasonally like a capsule wardrobe.
 2. Solve alignment by precommitting to give AI unconditional love.

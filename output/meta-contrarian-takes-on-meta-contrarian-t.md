@@ -17,7 +17,7 @@ comments:
         replies:
         - author: Anonymous
           content: >-
-            How dare you call me a rationalist! I'll have you know that I'm probably even wronger than you!
+            How dare you call me rational! I'll have you know that I'm probably even wronger than you!
           karma: '2'
           aggreement: ''
 ---

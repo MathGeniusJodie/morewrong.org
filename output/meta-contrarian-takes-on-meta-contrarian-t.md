@@ -14,6 +14,12 @@ comments:
           this. This just shows how fascist rationalists are.
         karma: '7'
         aggreement: ''
+        replies:
+        - author: Anonymous
+          content: >-
+            How dare you call me a rationalist! I'll have you know that I'm probably even wronger than you!
+          karma: '2'
+          aggreement: ''
 ---
 
 ### Introduction: The Contrarian Ouroboros
